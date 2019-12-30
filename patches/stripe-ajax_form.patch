@@ -1,5 +1,5 @@
 diff --git a/js/stripe.js b/js/stripe.js
-index ce90de9..238883e 100644
+index f0d95d4..238883e 100644
 --- a/js/stripe.js
 +++ b/js/stripe.js
 @@ -2,12 +2,12 @@
@@ -57,11 +57,14 @@ index ce90de9..238883e 100644
              var stripeSelectors = JSON.parse(element.getAttribute('data-drupal-stripe-selectors'))
  
              // Create an instance of Elements
-@@ -57,14 +68,14 @@
+@@ -57,17 +68,14 @@
              $(element).trigger('drupalStripe.elementCreate', ['card', options]);
  
              // Create an instance of the card Element
 -            var card = elements.create('card', options);
+-
+-            // Allow other modules to act on the created card element
+-            $(element).trigger('drupalStripe.elementCreated', ['card', card, elements]);
 +            Drupal.stripeElements[base] = elements.create('card', options);
  
              // Add an instance of the card Element into the `card-element` <div>
@@ -76,7 +79,7 @@ index ce90de9..238883e 100644
                  var displayError = document.getElementById(element.id + '-card-errors');
                  if (event.error) {
                    displayError.textContent = event.error.message;
-@@ -73,13 +84,64 @@
+@@ -76,13 +84,64 @@
                  }
                });
  
@@ -144,7 +147,7 @@ index ce90de9..238883e 100644
  
                  if (previousValues !== formValues) {
  
-@@ -88,49 +150,14 @@
+@@ -91,49 +150,14 @@
  
                    $form.trigger('drupalStripe.submitStart');
  
@@ -191,15 +194,15 @@ index ce90de9..238883e 100644
 -                    }
 -                  }
 +                  $(element).trigger('drupalStripe.createToken', [Drupal.stripeElements[baseId], stripeOptions]);
++
++                  var options = filterStripeValues(stripeOptions);
  
 -                  stripe.createToken(card, options).then(function(result) {
-+                  var options = filterStripeValues(stripeOptions);
-+
 +                  stripe.createToken(Drupal.stripeElements[baseId], options).then(function (result) {
                      if (result.error) {
                        // Inform the user if there was an error
                        var errorElement = document.getElementById(element.id + '-card-errors');
-@@ -140,13 +167,50 @@
+@@ -143,13 +167,50 @@
                      } else {
                        // Send the token to your server
                        element.setAttribute('value', result.token.id);

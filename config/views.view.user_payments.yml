@@ -3,15 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_day
-    - field.storage.node.field_venue
     - field.storage.payment.field_hoodie_size
     - field.storage.payment.field_tshirt_size
   module:
-    - node
     - options
     - payment
-    - taxonomy
 id: user_payments
 label: 'User Payments'
 module: views
@@ -19,7 +15,6 @@ description: ''
 tag: ''
 base_table: payment
 base_field: id
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -335,6 +330,8 @@ display:
             remember_roles:
               authenticated: authenticated
             placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

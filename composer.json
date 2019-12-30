@@ -1,5 +1,5 @@
 {
-    "name": "badcamp/badcamp-2019",
+    "name": "badcamp/badcamp-2020",
     "description": "Install drops-8 with Composer on Pantheon.",
     "type": "project",
     "license": "MIT",
@@ -36,15 +36,6 @@
                     "url": "https://github.com/kenwheeler/slick/archive/1.8.0.zip",
                     "reference": "master"
                 }
-            }
-        },
-        "4": {
-            "type": "git",
-            "url": "https://github.com/Blanca-Esqueda/content_sync",
-            "package": {
-                "name": "drupal/content_sync",
-                "version": "8.x-2.x",
-                "type": "drupal-module"
             }
         },
         "jquery-validation": {
@@ -129,8 +120,8 @@
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1.8",
-        "drupal/content_sync": "8.x-2.x-dev",
-        "drupal/core": "8.7.4",
+        "drupal/core": "^8.8",
+        "drupal/core-recommended": "^8.8",
         "drupal/create_user_permission": "^1.2",
         "drupal/custom_add_another": "^1.0@beta",
         "drupal/daterange_compact": "1.x-dev",
@@ -195,7 +186,6 @@
         "oomphinc/composer-installers-extender": "^1.1",
         "pantheon-systems/quicksilver-pushback": "~1",
         "rvtraveller/qs-composer-installer": "^1.1",
-        "webflo/drupal-core-strict": "^8",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
@@ -210,7 +200,7 @@
         "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
         "mikey179/vfsstream": "^1.2",
         "phpunit/phpunit": "^4.8",
-        "symfony/css-selector": "^2.8"
+        "symfony/css-selector": "^3"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -298,8 +288,7 @@
         },
         "patches": {
             "drupal/core": {
-                "Issue #3003150 - Media Library Widget": "https://www.drupal.org/files/issues/2018-12-05/drupal-media-library-paragraphs-3003150-19-8.x.patch",
-                "Issue #2457999 - Views Relationship Render": "https://www.drupal.org/files/issues/2019-05-04/2457999-194.patch"
+                "Issue #2457999 - Views Relationship Render": "https://www.drupal.org/files/issues/2019-10-25/2457999-222.patch"
             },
             "drupal/multiple_selects": {
                 "Issue #2866543 - Support required fields": "https://www.drupal.org/files/issues/2866543.patch"
@@ -307,15 +296,8 @@
             "drupal/payment_stripe": {
                 "Improvements": "patches/payment_stripe-expand_on_module.patch"
             },
-            "drupal/payment": {
-                "Fields on Payments don't save (Issue #2841035)": "https://www.drupal.org/files/issues/fix_fieldable.patch",
-                "Issue with Pre render table": "patches/payment-pre_render_table.patch"
-            },
             "drupal/stripe": {
                 "Ajax Form": "patches/stripe-ajax_form.patch"
-            },
-            "drupal/content_sync": {
-                "Fixed issue with variable referencing": "https://github.com/Blanca-Esqueda/content_sync/pull/15.diff"
             }
         }
     },

@@ -1,4 +1,3 @@
-uuid: 21eaa66c-fe19-450b-8f7d-5126804380de
 langcode: en
 status: open
 dependencies:
@@ -7,12 +6,6 @@ dependencies:
       - webform
   module:
     - honeypot
-third_party_settings:
-  honeypot:
-    honeypot: true
-    time_restriction: true
-_core:
-  default_config_hash: Db1CJM6FchEqqeVz5YJThCK0WB599y4NjQ4GkPcGF5g
 open: null
 close: null
 weight: 0
@@ -29,9 +22,13 @@ javascript: ''
 settings:
   ajax: false
   ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
   page: true
   page_submit_path: /contact-us
   page_confirm_path: ''
+  page_admin_theme: false
   form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
@@ -85,6 +82,7 @@ settings:
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: false
+  wizard_progress_states: false
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
@@ -103,6 +101,8 @@ settings:
   draft_auto_save: false
   draft_saved_message: ''
   draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
   confirmation_type: url_message
   confirmation_title: ''
   confirmation_message: 'Your message has been sent.'
@@ -113,6 +113,7 @@ settings:
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false
   confirmation_exclude_token: false
+  confirmation_update: false
   limit_total: null
   limit_total_interval: null
   limit_total_message: ''
@@ -129,6 +130,7 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  token_view: false
   token_update: false
 access:
   create:
@@ -206,12 +208,13 @@ handlers:
       html: true
       attachments: false
       twig: false
-      theme_name: ''
       debug: false
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme_name: ''
+      parameters: {  }
   email_notification:
     id: email
     label: 'Email notification'
@@ -240,9 +243,17 @@ handlers:
       html: true
       attachments: false
       twig: false
-      theme_name: ''
       debug: false
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme_name: ''
+      parameters: {  }
+uuid: 21eaa66c-fe19-450b-8f7d-5126804380de
+third_party_settings:
+  honeypot:
+    honeypot: true
+    time_restriction: true
+_core:
+  default_config_hash: Db1CJM6FchEqqeVz5YJThCK0WB599y4NjQ4GkPcGF5g
