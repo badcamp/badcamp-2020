@@ -14,7 +14,7 @@ provider: null
 plugin: 'mailchimp_signup_subscribe_block:stay_connected'
 settings:
   id: 'mailchimp_signup_subscribe_block:stay_connected'
-  label: 'Stay Connected In 2019'
+  label: 'Stay Connected In 2020'
   provider: mailchimp_signup
   label_display: visible
 visibility: {  }

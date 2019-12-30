@@ -20,9 +20,13 @@ function bay_area_camp_form_mailchimp_signup_subscribe_block_stay_connected_form
 
   $form['container']['mergevars'] = $form['mergevars'];
   $form['container']['actions'] = $form['actions']['submit'];
-  unset($form['mergevars']);
+  if (isset($form['mergevars'])) {
+    unset($form['mergevars']);
+  }
 
-  unset($form['actions']);
+  if(isset($form['actions'])) {
+    unset($form['actions']);
+  }
 
   $form['description']['#prefix'] = '<p class="description">';
   $form['description']['#suffix'] = '</p>';

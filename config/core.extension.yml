@@ -76,6 +76,7 @@ module:
   paragraphs_class: 0
   paragraphs_library: 0
   path: 0
+  path_alias: 0
   payment: 0
   payment_form: 0
   payment_stripe: 0

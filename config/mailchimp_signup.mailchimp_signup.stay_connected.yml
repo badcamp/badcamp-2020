@@ -5,7 +5,7 @@ dependencies: {  }
 id: stay_connected
 title: 'Stay Connected'
 mc_lists:
-  dc1528ac44: dc1528ac44
+  eba75396e0: eba75396e0
   369d9cab7d: '0'
   9fd897a628: '0'
   3d4fa23bb8: '0'
@@ -15,6 +15,8 @@ mc_lists:
   3f53420cd5: '0'
   24c579eebf: '0'
   d03e008591: '0'
+  2e96926a66: '0'
+  3fbf1a9e64: '0'
   e6f2295ae4: '0'
   3afcc841d3: '0'
   e4dfe06b87: '0'
@@ -26,17 +28,19 @@ mc_lists:
   b5b1eb2b88: '0'
   3d87728229: '0'
   f6da40ada9: '0'
+  dc1528ac44: '0'
   9e1e5e346e: '0'
   f2586cbc30: '0'
   8560b08cbe: '0'
   5c9db93323: '0'
   e35465c9be: '0'
+  a6f3e09039: '0'
 mode: 1
 mergefields:
   EMAIL: true
   FNAME: false
   LNAME: false
-description: 'Join the BADCamp 2019 mailing list to get the latest updates on event details and session submissions.'
+description: 'Join the BADCamp 2020 mailing list to get the latest updates on event details and session submissions.'
 doublein: false
 send_welcome: null
 include_interest_groups: false
@@ -46,10 +50,10 @@ settings:
   confirmation_message: 'You have been successfully subscribed.'
   destination: ''
   mergefields:
-    EMAIL: 'O:8:"stdClass":8:{s:3:"tag";s:5:"EMAIL";s:4:"name";s:13:"Email Address";s:4:"type";s:5:"email";s:8:"required";b:1;s:13:"default_value";s:0:"";s:6:"public";b:1;s:13:"display_order";i:1;s:7:"options";O:8:"stdClass":1:{s:4:"size";i:25;}}'
+    EMAIL: "O:8:\"stdClass\":8:{s:3:\"tag\";s:5:\"EMAIL\";s:4:\"name\";O:48:\"Drupal\\Core\\StringTranslation\\TranslatableMarkup\":3:{s:9:\"\0*\0string\";s:13:\"Email Address\";s:12:\"\0*\0arguments\";a:0:{}s:10:\"\0*\0options\";a:0:{}}s:4:\"type\";s:5:\"email\";s:8:\"required\";b:1;s:13:\"default_value\";s:0:\"\";s:6:\"public\";b:1;s:13:\"display_order\";i:1;s:7:\"options\";O:8:\"stdClass\":1:{s:4:\"size\";i:25;}}"
     FNAME: '0'
     LNAME: '0'
-  description: 'Join the BADCamp 2019 mailing list to get the latest updates on event details and session submissions.'
+  description: 'Join the BADCamp 2020 mailing list to get the latest updates on event details and session submissions.'
   doublein: false
   include_interest_groups: false
   safe_interest_groups: false
