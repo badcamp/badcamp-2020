@@ -20,6 +20,7 @@ use Drupal\views\Views;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Link;
 
 /**
  * Implements hook_help().
@@ -46,9 +47,21 @@ function badcamp_form_node_job_posting_form_alter(&$form, FormStateInterface $fo
 
   $options =& $form['field_sponsor']['widget']['#options'];
   foreach ($options AS $nid => $option) {
-    if ($nid !== '_none' && !\Drupal::entityTypeManager()->getStorage('node')->load($nid)->access('update')) {
+    $sponsor = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+    $can_update = $sponsor !== NULL ? $sponsor->access('update') : FALSE;
+    if ($nid !== '_none' && !$can_update) {
       unset($options[$nid]);
     }
+
+    if ($nid !== '_none' && !can_post_job_posting($sponsor)) {
+      unset($options[$nid]);
+    }
+  }
+
+  if (sizeof($options) == 2) {
+    $keys = array_keys($options);
+    $form['field_sponsor']['widget']['#default_value'] = $keys[1];
+    $form['field_sponsor']['widget']['#disabled'] = true;
   }
 }
 
@@ -240,14 +253,59 @@ function _allowed_formats_remove_textarea_help($form_element, FormStateInterface
  */
 function badcamp_entity_create_access(AccountInterface $account, array $context, $entity_bundle) {
   if ($entity_bundle == 'job_posting') {
+    // Get all Sponsors for the Current Person.
     $sponsors = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
       'type' => 'sponsor',
-      'field_members' => $account->id()
+      'field_members' => $account->id(),
     ]);
+
+    /** @var \Drupal\node\Entity\Node $sponsor */
+    foreach ($sponsors AS $id => $sponsor) {
+      if ( !can_post_job_posting($sponsor) ) {
+        unset($sponsors[$id]);
+      }
+    }
+
     if (count($sponsors) > 0) {
-      return \Drupal\Core\Access\AccessResult::allowed();
+      return AccessResult::allowed();
     }
   }
+}
+
+/**
+ * @param $sponsor_id
+ *
+ * @return int
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function total_job_postings($sponsor_id) {
+  $jobPostings = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+    'type' => 'job_posting',
+    'field_sponsor' => $sponsor_id,
+  ]);
+  return count($jobPostings);
+}
+
+/**
+ * @param $sponsor
+ *
+ * @return bool
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function can_post_job_posting($sponsor) {
+  $sponsorLevel = $sponsor->get('field_sponsor_level')->first()->get('entity')->getTarget()->getValue();
+
+  $totalJobPostings = total_job_postings($sponsor->id());
+  $sponsorLevelJobAmount = intval($sponsorLevel->get('field_job_posting_limit')->getString());
+  $additionalJobPostings = intval($sponsor->get('field_additional_job_postings')->getString());
+
+  if ( $sponsorLevelJobAmount != -1 && $totalJobPostings > 0 && ( $totalJobPostings >= ($sponsorLevelJobAmount + $additionalJobPostings) )) {
+    return false;
+  }
+
+  return true;
 }
 
 /**
@@ -336,4 +394,33 @@ function badcamp_preprocess_flag(&$vars) {
     }
     $vars['attributes']['title'] = t('@entity - @action', ['@action' => $vars['title']['#markup'], '@entity' => $entity->getTitle()]);
   }
+}
+
+/**
+ * Implements template_preprocess_views_view_unformatted__view__display().
+ */
+function badcamp_preprocess_views_view_unformatted__job_postings__listings(&$vars) {
+  $logged_in = \Drupal::currentUser()->isAuthenticated();
+  $create_job = \Drupal::entityTypeManager()->getAccessControlHandler('node')->createAccess('job_posting');
+  $cta_info = \Drupal::config('badcamp.settings')->get('cta');
+
+  $cta = '';
+  $cta_data = FALSE;
+  if ($logged_in && $create_job) {
+    $cta_data = $cta_info['job_board_logged_in'];
+  }
+  else {
+    $cta_data = $cta_info['job_board_logged_out'];
+  }
+
+  if ($cta_data !== FALSE) {
+    $text = $cta_data['text'];
+    $url = Url::fromUserInput($cta_data['link']);
+    if (isset($cta_data['options'])) {
+      $url->setOptions($cta_data['options']);
+    }
+    $cta = Link::fromTextAndUrl($text, $url);
+  }
+
+  $vars['cta'] = $cta;
 }

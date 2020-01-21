@@ -7,7 +7,7 @@ _core:
 id: front
 label: 'Front page'
 tags:
+  title: 'Bay Area Drupal Camp | Oct 14-17, 2020'
+  description: 'Join us October 14-17, 2020 for BADCAMP. It will be taking place this year at the Hotel Shattuck in Berkley, CA. '
   canonical_url: '[site:url]'
-  description: 'Join us October 2-5, 2019 for BADCAMP. It will be taking place this year at the Hotel Shattuck in Berkley, CA. This is an amazing event where many come together to show their skills and passion towards what they have learned in Drupal and other related tools.'
   shortlink: '[site:url]'
-  title: 'Bay Area Drupal Camp | Oct 2-5, 2019'

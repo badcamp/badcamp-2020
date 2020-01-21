@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.sponsor_logo
+    - field.field.node.sponsor.field_additional_job_postings
     - field.field.node.sponsor.field_members
     - field.field.node.sponsor.field_sponsor_description
     - field.field.node.sponsor.field_sponsor_level
@@ -29,6 +30,7 @@ content:
       image_link: content
     third_party_settings: {  }
 hidden:
+  field_additional_job_postings: true
   field_members: true
   field_sponsor_description: true
   field_sponsor_level: true

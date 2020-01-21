@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
+    - field.field.node.sponsor.field_additional_job_postings
     - field.field.node.sponsor.field_members
     - field.field.node.sponsor.field_sponsor_description
     - field.field.node.sponsor.field_sponsor_level
@@ -70,4 +71,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_additional_job_postings: true

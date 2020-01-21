@@ -13,6 +13,7 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'access user profiles'
+  - 'allow users to register with badcamp_register'
   - currency.currency.view
   - currency.currency_locale.view
   - 'search content'

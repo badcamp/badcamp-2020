@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.sponsor.field_additional_job_postings
     - field.field.node.sponsor.field_members
     - field.field.node.sponsor.field_sponsor_description
     - field.field.node.sponsor.field_sponsor_level
@@ -19,6 +20,15 @@ targetEntityType: node
 bundle: sponsor
 mode: default
 content:
+  field_additional_job_postings:
+    weight: 108
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
   field_members:
     weight: 103
     label: hidden

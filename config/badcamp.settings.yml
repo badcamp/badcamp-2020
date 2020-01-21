@@ -17,3 +17,16 @@ payments:
     title: 'BADCAMP Training'
     page_title: 'Training Registration'
     permission: 'register for trainings'
+cta:
+  job_board_logged_in:
+    text: "Add Job Posting"
+    link: "/node/add/job_posting?destination=sponsors/job-board"
+    options:
+      attributes:
+        class: ["button", "primary"]
+  job_board_logged_out:
+    text: "Post Your Job"
+    link: "/supporting-sponsor"
+    options:
+      attributes:
+        class: ["button", "primary"]
