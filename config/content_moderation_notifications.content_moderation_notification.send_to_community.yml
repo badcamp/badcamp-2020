@@ -1,0 +1,16 @@
+uuid: 1a3063eb-2602-449e-a555-6f9dde7f681d
+langcode: en
+status: true
+dependencies: {  }
+id: send_to_community
+workflow: editorial
+transitions:
+  create_new_draft: create_new_draft
+roles: {  }
+author: false
+emails: jobs@badcamp.org
+subject: 'New Job Posting: [node:title]'
+body:
+  value: "<p>New Job Posting as been added for review.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Title: [node:title]</p>\r\n\r\n<p>Sponsor:&nbsp;[node:field_sponsor:entity:title]</p>\r\n\r\n<p>Link:&nbsp;[node:url:absolute]</p>\r\n"
+  format: basic_html
+label: 'Send to Community'

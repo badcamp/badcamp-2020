@@ -424,3 +424,12 @@ function badcamp_preprocess_views_view_unformatted__job_postings__listings(&$var
 
   $vars['cta'] = $cta;
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function badcamp_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'content_moderation_notification_edit_form' || $form_id == 'content_moderation_notification_add_form') {
+    $form['body']['token_tree_link']['#token_types'][] = 'node';
+  }
+}

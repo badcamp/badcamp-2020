@@ -1,0 +1,16 @@
+uuid: a8023ab7-4f5c-48a3-a179-cadc6bab14a5
+langcode: en
+status: true
+dependencies: {  }
+id: send_to_author
+workflow: editorial
+transitions:
+  publish: publish
+roles: {  }
+author: true
+emails: jobs@badcamp.org
+subject: 'Job Posting Published: [node:title]'
+body:
+  value: "<p>Job Posting has been Approved and Published. This will now appear on the <a href=\"/job-board\">Job Board</a>.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Title: [node:title]</p>\r\n\r\n<p>Sponsor:&nbsp;[node:field_sponsor:entity:title]</p>\r\n\r\n<p>Link:&nbsp;[node:url:absolute]</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Thank you contributing to the Job Board.</p>\r\n\r\n<p>Bay Area Drupal Camp</p>\r\n"
+  format: basic_html
+label: 'Send to Author'
