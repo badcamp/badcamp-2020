@@ -42,18 +42,18 @@
   }
   .main-block-image {
     img {
-      height: 200px;
+      height: 300px;
       object-fit: cover;
-      object-position: center bottom;
+      object-position: center middle;
       padding-bottom: 1.25em;
       @include breakpoint('medium') {
-        height: 360px;
+        height: 400px;
       }
       @include breakpoint('large') {
-        height: 300px;
+        height: 370px;
       }
       @include breakpoint('xlarge') {
-        height: 320px;
+        height: 330px;
       }
     }
   }
