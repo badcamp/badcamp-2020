@@ -1,0 +1,35 @@
+uuid: 159ecd52-57eb-4c7d-8bc6-6a829e72cf79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_length
+    - node.type.training
+    - taxonomy.vocabulary.session_length
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.training.field_session_length
+field_name: field_session_length
+entity_type: node
+bundle: training
+label: 'Session Length'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      session_length: session_length
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

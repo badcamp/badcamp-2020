@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.training.field_members
     - field.field.node.training.field_payment
     - field.field.node.training.field_register_capacity
+    - field.field.node.training.field_session_length
     - field.field.node.training.field_skill_level
     - field.field.node.training.field_sponsors
     - field.field.node.training.field_timeslot
@@ -17,6 +18,7 @@ dependencies:
     - node.type.training
   module:
     - badcamp
+    - content_moderation
     - field_group
     - file
     - link
@@ -26,6 +28,7 @@ third_party_settings:
   field_group:
     group_scheduling:
       children:
+        - field_session_length
         - field_venue
         - field_day
         - field_timeslot
@@ -55,7 +58,7 @@ content:
     third_party_settings: {  }
     region: content
   field_day:
-    weight: 27
+    weight: 30
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -77,11 +80,17 @@ content:
     type: badcamp_payment_field
     region: content
   field_register_capacity:
-    weight: 29
+    weight: 32
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_session_length:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_skill_level:
     weight: 2
@@ -96,7 +105,7 @@ content:
     type: options_buttons
     region: content
   field_timeslot:
-    weight: 28
+    weight: 31
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -117,11 +126,17 @@ content:
     type: link_default
     region: content
   field_venue:
-    weight: 26
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 9
