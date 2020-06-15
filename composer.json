@@ -115,6 +115,8 @@
         "drupal/block_class": "^1.0",
         "drupal/block_field": "^1.0@alpha",
         "drupal/cer": "^4.0@alpha",
+        "drupal/commerce": "^2.19",
+        "drupal/commerce_stripe": "^1.0@RC",
         "drupal/conditional_fields": "^1.0@alpha",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
@@ -145,7 +147,7 @@
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/lets_camp": "6.x-dev",
         "drupal/link_attributes": "^1.8",
-        "drupal/mailchimp": "^1.8",
+        "drupal/mailchimp": "^1.11",
         "drupal/menu_attributes": "1.x-dev",
         "drupal/menu_item_visibility": "1.x-dev",
         "drupal/menu_link_attributes": "^1.0",
@@ -284,7 +286,7 @@
         },
         "patches": {
             "drupal/core": {
-                "Issue #2457999 - Views Relationship Render": "https://www.drupal.org/files/issues/2019-10-25/2457999-222.patch"
+                "Issue #2457999 - Views Relationship Render": "https://www.drupal.org/files/issues/2020-05-30/cannot-use-relationship-2457999-236.patch"
             },
             "drupal/multiple_selects": {
                 "Issue #2866543 - Support required fields": "https://www.drupal.org/files/issues/2866543.patch"
