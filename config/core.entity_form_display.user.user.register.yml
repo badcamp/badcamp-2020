@@ -13,6 +13,7 @@ dependencies:
     - field.field.user.user.field_social_profile_links
     - field.field.user.user.field_subscribe_to_badcamp_newsl
     - field.field.user.user.field_title
+    - field.field.user.user.field_user_notes
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -288,6 +289,7 @@ content:
     region: content
 hidden:
   contact: true
+  field_user_notes: true
   google_analytics: true
   language: true
   timezone: true
