@@ -106,9 +106,8 @@
     "require": {
         "php": ">=7.0.8",
         "antennaio/jquery-bar-rating": "*",
-        "composer/installers": "^1.0.20",
+        "composer/installers": "^1.8",
         "cweagans/composer-patches": "^1.0",
-        "drupal-composer/drupal-scaffold": "^2.0.1",
         "drupal/admin_toolbar": "^1.26",
         "drupal/badcamp_sight": "1.x-dev",
         "drupal/better_exposed_filters": "^3.0@alpha",
@@ -121,8 +120,10 @@
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1.8",
         "drupal/content_moderation_notifications": "^3.2",
-        "drupal/core": "^8.8",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
+        "drupal/core-vendor-hardening": "^8.8",
         "drupal/create_user_permission": "^1.2",
         "drupal/custom_add_another": "^1.0@beta",
         "drupal/daterange_compact": "1.x-dev",
@@ -192,18 +193,7 @@
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "behat/behat": "3.*",
-        "behat/mink": "^1.7",
-        "behat/mink-extension": "^2.2",
-        "behat/mink-goutte-driver": "^1.2",
-        "drupal/devel": "^2.0",
-        "drupal/drupal-extension": "^3.1",
-        "drupal/twig_xdebug": "^1.0",
-        "jcalderonzumba/gastonjs": "^1.0.2",
-        "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
-        "mikey179/vfsstream": "^1.2",
-        "phpunit/phpunit": "^4.8",
-        "symfony/css-selector": "^3"
+        "drupal/core-dev": "^8.8"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -275,6 +265,9 @@
             "export-configuration": "drush config-export --yes"
         },
         "drupal-scaffold": {
+            "locations": {
+                "web-root": "./web"
+            },
             "source": "https://raw.githubusercontent.com/pantheon-systems/drops-8-scaffolding/{version}/{path}",
             "includes": [
                 "sites/default/default.services.pantheon.preproduction.yml",

@@ -12,6 +12,8 @@
 /web/profiles/contrib/
 /web/private/scripts/quicksilver
 
+.editorconfig
+
 # Ignore scaffold files
 web/.csslintrc
 web/.editorconfig
@@ -46,6 +48,12 @@ web/web.config
 .vscode
 .idea
 # :::::::::::::::::::::: cut ::::::::::::::::::::::
+
+web/.gitignore
+web/modules/.gitignore
+web/profiles/.gitignore
+web/sites/.gitignore
+web/themes/.gitignore
 
 ###
 ### Pantheon site .gitignore section
@@ -105,3 +113,17 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
+/.csslintrc
+/.eslintignore
+/.eslintrc.json
+/.gitattributes
+/.ht.router.php
+/.htaccess
+/INSTALL.txt
+/README.txt
+/autoload.php
+/example.gitignore
+/index.php
+/robots.txt
+/update.php
+/web.config
