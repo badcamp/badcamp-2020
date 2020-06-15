@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.training.field_members
     - field.field.node.training.field_payment
     - field.field.node.training.field_register_capacity
+    - field.field.node.training.field_session_length
     - field.field.node.training.field_skill_level
     - field.field.node.training.field_sponsors
     - field.field.node.training.field_timeslot
@@ -65,6 +66,14 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
+  field_session_length:
+    weight: 13
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_skill_level:
     weight: 0

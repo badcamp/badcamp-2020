@@ -7,8 +7,14 @@
     @extend .bold-link;
   }
 }
+
+.event-details__inner {
+  background: $grayish;
+  padding: 0.75em 1.25em;
+}
+
 .field__add__to__schedule {
-  margin-top: 1.5em;
+  // margin-top: 1.5em;
 }
 .flag-add-to-schedule {
   i {

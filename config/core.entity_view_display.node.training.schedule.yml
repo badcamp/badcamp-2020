@@ -8,6 +8,8 @@ dependencies:
     - field.field.node.training.field_day
     - field.field.node.training.field_members
     - field.field.node.training.field_payment
+    - field.field.node.training.field_register_capacity
+    - field.field.node.training.field_session_length
     - field.field.node.training.field_skill_level
     - field.field.node.training.field_sponsors
     - field.field.node.training.field_timeslot
@@ -86,6 +88,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_register_capacity: true
+  field_session_length: true
   field_sponsors: true
   field_training_files: true
   field_training_links: true
