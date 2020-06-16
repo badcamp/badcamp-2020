@@ -15,4 +15,13 @@ table {
   tr {
     border-bottom: 1px solid #ccc;
   }
+
+  .table-bullet {
+    font-family: $font-awesome;
+    color: $dark-salmon;
+
+    &:before {
+      content: '\f00c';
+    }
+  }
 }
