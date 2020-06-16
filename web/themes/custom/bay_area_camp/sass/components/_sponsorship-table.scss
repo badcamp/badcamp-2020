@@ -1,0 +1,31 @@
+.sponsorship-table {
+  h2 {
+    @extend .sponsor-level;
+    font-size: rem-calc(26);
+    margin-bottom: 1.25rem;
+  }
+
+  thead {
+    background: white;
+    border: 0;
+    border-bottom: 3px solid $salmon;
+
+    th {
+      padding: rem-calc(6 8 6 0);
+    }
+  }
+
+  th[scope=row] {
+    text-align: left;
+    font-weight: 600 !important;
+  }
+
+  th[scope=col] {
+    width: 12.5%;
+    font-weight: 600 !important;
+  }
+
+  td {
+    font-weight: 600 !important;
+  }
+}
