@@ -1,0 +1,27 @@
+table {
+  font-family: $monsterrat;
+
+  thead {
+    background: white;
+    border: 0;
+    border-bottom: 2px solid $medium-gray;
+  }
+
+  tbody {
+    border: 0;
+    border-bottom: 1px solid $medium-gray;
+  }
+
+  tr {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .table-bullet {
+    font-family: $font-awesome;
+    color: $dark-salmon;
+
+    &:before {
+      content: '\f00c';
+    }
+  }
+}
