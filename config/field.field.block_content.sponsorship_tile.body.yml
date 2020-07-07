@@ -1,0 +1,28 @@
+uuid: de05d614-4b57-4700-ad3c-155f6c4b85ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsorship_tile
+    - field.storage.block_content.body
+  module:
+    - custom_add_another
+    - text
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: block_content.sponsorship_tile.body
+field_name: body
+entity_type: block_content
+bundle: sponsorship_tile
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

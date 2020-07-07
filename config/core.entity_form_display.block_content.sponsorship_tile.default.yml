@@ -1,0 +1,33 @@
+uuid: 8a2ebcf5-51bd-4452-b5b7-ea8c38dcc271
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsorship_tile
+    - field.field.block_content.sponsorship_tile.body
+  module:
+    - text
+id: block_content.sponsorship_tile.default
+targetEntityType: block_content
+bundle: sponsorship_tile
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

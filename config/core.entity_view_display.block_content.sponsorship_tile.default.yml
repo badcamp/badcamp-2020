@@ -1,0 +1,22 @@
+uuid: a4e6526e-2ab3-443c-a9b4-07dc9f384d16
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sponsorship_tile
+    - field.field.block_content.sponsorship_tile.body
+  module:
+    - text
+id: block_content.sponsorship_tile.default
+targetEntityType: block_content
+bundle: sponsorship_tile
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

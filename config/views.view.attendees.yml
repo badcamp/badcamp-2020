@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.user.compact
   module:
     - file
+    - options
     - user
 id: attendees
 label: Attendees
@@ -136,6 +137,47 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
+        field_options_value:
+          id: field_options_value
+          table: user__field_options
+          field: field_options_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            list: list
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts:
         count:
           id: count
@@ -178,6 +220,22 @@ display:
       display_extenders: {  }
       use_ajax: true
       css_class: 'grid-x grid-margin-x grid-margin-y'
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: '2020'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
     cache_metadata:
       max-age: 0
       contexts:

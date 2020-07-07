@@ -1,0 +1,8 @@
+uuid: 36d46173-0d83-46f7-bdb6-e2f8e06fe0a4
+langcode: en
+status: true
+dependencies: {  }
+id: sponsorship_tile
+label: 'Sponsorship Tile'
+revision: 1
+description: 'Used to advertise sponsorship add-ons.'
