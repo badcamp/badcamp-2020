@@ -15,17 +15,24 @@
     }
   }
 
-  th[scope=row] {
+  th[scope="row"] {
     text-align: left;
     font-weight: 600 !important;
+    width: 40%;
   }
 
-  th[scope=col] {
-    width: 12.5%;
+  td,
+  th[scope="col"] {
+    width: 12%;
+    text-align: center;
     font-weight: 600 !important;
+    // border-left: 1px solid #ccc;
   }
 
-  td {
-    font-weight: 600 !important;
+  .table-bullet {
+    background-image: url("../images/check-solid.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: center center;
   }
 }
