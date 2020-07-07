@@ -23,12 +23,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 4
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   field_day:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       link: true
@@ -36,7 +36,7 @@ content:
     type: entity_reference_label
     region: content
   field_members:
-    weight: 5
+    weight: 4
     label: hidden
     settings:
       view_mode: sponsor_team_member
@@ -45,7 +45,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_sponsors:
-    weight: 6
+    weight: 5
     label: hidden
     settings:
       view_mode: sponsor_logo
@@ -54,7 +54,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_timeslot:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       link: true
@@ -62,18 +62,14 @@ content:
     type: entity_reference_label
     region: content
   field_venue:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  flag_add_to_schedule:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_register_capacity: true
+  flag_add_to_schedule: true
   links: true
