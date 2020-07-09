@@ -195,24 +195,27 @@ display:
           clear_on_exposed: false
           action_title: Action
           selected_actions:
-            payment_line_item_unset: payment_line_item_unset
-            payment_set_status: payment_set_status
-            views_bulk_edit: views_bulk_edit
-            views_bulk_operations_delete_entity: views_bulk_operations_delete_entity
-            pathauto_update_alias: 0
-            'entity:save_action:payment': 'entity:save_action:payment'
-          preconfiguration:
-            payment_line_item_unset:
-              label_override: ''
-            payment_set_status:
-              label_override: ''
-            views_bulk_edit:
-              label_override: ''
-              get_bundles_from_results: 1
-            views_bulk_operations_delete_entity:
-              label_override: ''
-            'entity:save_action:payment':
-              label_override: ''
+            -
+              action_id: payment_line_item_unset
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: payment_set_status
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: views_bulk_edit
+              preconfiguration:
+                label_override: ''
+                get_bundles_from_results: 1
+            -
+              action_id: views_bulk_operations_delete_entity
+              preconfiguration:
+                label_override: ''
+            -
+              action_id: 'entity:save_action:payment'
+              preconfiguration:
+                label_override: ''
           plugin_id: views_bulk_operations_bulk_form
         changed_1:
           id: changed_1

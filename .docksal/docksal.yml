@@ -8,6 +8,7 @@ services:
     environment:
       - PANTHEON_SITE
       - PANTHEON_ENV
+      - COMPOSER_MEMORY_LIMIT=-1
     volumes:
       - ${PROJECT_ROOT}/.docksal/etc/drush:/etc/drush:ro
 
