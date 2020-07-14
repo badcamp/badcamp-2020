@@ -9,11 +9,11 @@ dependencies:
     - field.field.node.training.field_members
     - field.field.node.training.field_payment
     - field.field.node.training.field_register_capacity
-    - field.field.node.training.field_session_length
     - field.field.node.training.field_skill_level
     - field.field.node.training.field_sponsors
     - field.field.node.training.field_timeslot
     - field.field.node.training.field_training_files
+    - field.field.node.training.field_training_length
     - field.field.node.training.field_training_links
     - field.field.node.training.field_venue
     - node.type.training
@@ -36,7 +36,7 @@ content:
     third_party_settings: {  }
     region: content
   field_day:
-    weight: 3
+    weight: 2
     label: visually_hidden
     settings:
       link: true
@@ -58,14 +58,6 @@ content:
     region: content
     label: hidden
     settings: {  }
-    third_party_settings: {  }
-  field_session_length:
-    type: entity_reference_label
-    weight: 2
-    region: content
-    label: visually_hidden
-    settings:
-      link: false
     third_party_settings: {  }
   field_skill_level:
     weight: 0
@@ -100,6 +92,14 @@ content:
     third_party_settings: {  }
     type: file_table
     region: content
+  field_training_length:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
   field_training_links:
     weight: 7
     label: hidden

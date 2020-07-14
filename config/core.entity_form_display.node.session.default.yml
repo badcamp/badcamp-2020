@@ -5,14 +5,17 @@ dependencies:
   config:
     - field.field.node.session.body
     - field.field.node.session.field_day
+    - field.field.node.session.field_do_you_identify
     - field.field.node.session.field_members
     - field.field.node.session.field_register_capacity
+    - field.field.node.session.field_session_length
     - field.field.node.session.field_session_presentation_video
     - field.field.node.session.field_session_slides
     - field.field.node.session.field_session_topics
     - field.field.node.session.field_sponsors
     - field.field.node.session.field_status
     - field.field.node.session.field_timeslot
+    - field.field.node.session.field_track
     - field.field.node.session.field_twitter_description
     - field.field.node.session.field_venue
     - node.type.session
@@ -31,7 +34,7 @@ third_party_settings:
         - field_session_slides
         - field_session_presentation_video
       parent_name: ''
-      weight: 7
+      weight: 10
       format_type: fieldset
       format_settings:
         id: ''
@@ -39,38 +42,15 @@ third_party_settings:
         description: ''
         required_fields: false
       label: 'Presentation Materials'
-    group_session_status:
-      children:
-        - field_status
-      parent_name: ''
-      weight: 6
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        required_fields: true
-      label: 'Session Status'
-    group_presenters:
-      children:
-        - field_members
-      parent_name: ''
-      weight: 4
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        required_fields: true
-      label: Presenters
     group_scheduling:
       children:
+        - field_status
         - field_venue
         - field_day
         - field_timeslot
         - field_register_capacity
       parent_name: ''
-      weight: 20
+      weight: 12
       format_type: fieldset
       format_settings:
         id: ''
@@ -85,7 +65,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 4
     settings:
       rows: 9
       summary_rows: 3
@@ -94,13 +74,19 @@ content:
     third_party_settings: {  }
     region: content
   field_day:
-    weight: 29
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_do_you_identify:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_members:
-    weight: 5
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -110,11 +96,17 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_register_capacity:
-    weight: 31
+    weight: 13
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_session_length:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_session_presentation_video:
     weight: 10
@@ -130,13 +122,13 @@ content:
     region: content
     type: file_generic
   field_session_topics:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: multiple_options_select
     region: content
   field_sponsors:
-    weight: 5
+    weight: 8
     settings:
       match_operator: CONTAINS
       size: 60
@@ -146,19 +138,25 @@ content:
     type: entity_reference_autocomplete_tags
     region: content
   field_status:
-    weight: 7
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_timeslot:
-    weight: 30
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_track:
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_twitter_description:
-    weight: 1
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -166,20 +164,20 @@ content:
     type: string_textfield
     region: content
   field_venue:
-    weight: 28
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 13
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }

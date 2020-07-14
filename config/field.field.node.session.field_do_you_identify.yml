@@ -1,22 +1,22 @@
-uuid: 159ecd52-57eb-4c7d-8bc6-6a829e72cf79
+uuid: cd82f072-7196-4ee4-adc9-379daf57fb62
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_session_length
-    - node.type.training
-    - taxonomy.vocabulary.session_length
+    - field.storage.node.field_do_you_identify
+    - node.type.session
+    - taxonomy.vocabulary.representation
   module:
     - custom_add_another
 third_party_settings:
   custom_add_another:
     custom_add_another: ''
     custom_remove: ''
-id: node.training.field_session_length
-field_name: field_session_length
+id: node.session.field_do_you_identify
+field_name: field_do_you_identify
 entity_type: node
-bundle: training
-label: 'Session Length'
+bundle: session
+label: 'Do you identify with any of the following underrepresented communities?'
 description: ''
 required: false
 translatable: false
@@ -26,7 +26,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      session_length: session_length
+      representation: representation
     sort:
       field: name
       direction: asc

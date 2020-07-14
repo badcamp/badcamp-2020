@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.event.field_venue
     - node.type.event
   module:
-    - content_moderation
     - field_group
     - link
     - text
@@ -105,12 +104,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  moderation_state:
-    type: moderation_state_default
-    weight: 100
-    settings: {  }
-    region: content
-    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 0

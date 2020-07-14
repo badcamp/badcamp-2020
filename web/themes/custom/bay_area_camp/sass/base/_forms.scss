@@ -21,6 +21,18 @@ textarea {
   font-size: rem-calc(18);
 }
 
+#edit-field-session-length--wrapper,
+#edit-field-do-you-identify--wrapper{
+  .fieldset-legend {
+    display: block;
+    margin: 0;
+    font-size: .875rem;
+    line-height: 1.8;
+    font-weight: 600;
+    color: $navy;
+  }
+}
+
 .form-wrapper summary {
   @extend .fieldset-legend;
   margin-bottom: 1em;

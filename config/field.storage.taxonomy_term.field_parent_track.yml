@@ -1,23 +1,22 @@
-uuid: 5d36349a-d604-4dbd-b161-e45df36179df
+uuid: 7fc5c2eb-228f-4094-a6c3-58ecd5208372
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
-    - node
     - taxonomy
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_session_length
-field_name: field_session_length
-entity_type: node
+id: taxonomy_term.field_parent_track
+field_name: field_parent_track
+entity_type: taxonomy_term
 type: entity_reference
 settings:
   target_type: taxonomy_term
 module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

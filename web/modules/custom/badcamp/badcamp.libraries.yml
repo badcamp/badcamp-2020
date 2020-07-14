@@ -1,0 +1,6 @@
+custom_donation:
+  js:
+    js/payment.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

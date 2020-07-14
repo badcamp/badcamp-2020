@@ -1,4 +1,4 @@
-uuid: 5d36349a-d604-4dbd-b161-e45df36179df
+uuid: dd7da2ea-f16f-4677-a088-3ab20855ce1f
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_session_length
-field_name: field_session_length
+id: node.field_training_length
+field_name: field_training_length
 entity_type: node
 type: entity_reference
 settings:

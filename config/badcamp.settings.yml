@@ -17,6 +17,10 @@ payments:
     title: 'BADCAMP Training'
     page_title: 'Training Registration'
     permission: 'register for trainings'
+  custom_badcamp_payment_sponsorship:
+    title: 'BADCAMP Donation'
+    page_title: Donation
+    redirect: /registration/confirm
 cta:
   job_board_logged_in:
     text: 'Add Job Posting'

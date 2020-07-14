@@ -1,0 +1,10 @@
+{{ attach_library('badcamp/custom_donation') }}
+{{ attach_library('core/drupal.dialog.ajax') }}
+
+<div>
+  <h2 class="text-align-center">{{ "Donation Amount" | t }}</h2>
+</div>
+<div>
+  <div><input type="text" placeholder="{{ "Enter Amount" | t }}" id="custom-donation-input" /></div>
+  <div id="payment-button-link"></div>
+</div>

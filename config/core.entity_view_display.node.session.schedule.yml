@@ -6,14 +6,17 @@ dependencies:
     - core.entity_view_mode.node.schedule
     - field.field.node.session.body
     - field.field.node.session.field_day
+    - field.field.node.session.field_do_you_identify
     - field.field.node.session.field_members
     - field.field.node.session.field_register_capacity
+    - field.field.node.session.field_session_length
     - field.field.node.session.field_session_presentation_video
     - field.field.node.session.field_session_slides
     - field.field.node.session.field_session_topics
     - field.field.node.session.field_sponsors
     - field.field.node.session.field_status
     - field.field.node.session.field_timeslot
+    - field.field.node.session.field_track
     - field.field.node.session.field_twitter_description
     - field.field.node.session.field_venue
     - node.type.session
@@ -79,10 +82,13 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_do_you_identify: true
   field_register_capacity: true
+  field_session_length: true
   field_session_presentation_video: true
   field_session_slides: true
   field_sponsors: true
   field_status: true
+  field_track: true
   field_twitter_description: true
   links: true

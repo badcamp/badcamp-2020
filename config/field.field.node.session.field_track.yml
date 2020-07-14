@@ -1,31 +1,35 @@
-uuid: 96440436-6981-4ad5-aea3-8e425552f1de
+uuid: 80aaf421-e8cb-4115-a0ad-ecbce856d476
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_session_topics
+    - field.storage.node.field_track
     - node.type.session
+    - taxonomy.vocabulary.tracks
   module:
     - custom_add_another
 third_party_settings:
   custom_add_another:
     custom_add_another: ''
     custom_remove: ''
-id: node.session.field_session_topics
-field_name: field_session_topics
+id: node.session.field_track
+field_name: field_track
 entity_type: node
 bundle: session
-label: Topics
-description: 'Pick the top topics the presentation covers.'
+label: Track
+description: ''
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: views
+  handler: 'default:taxonomy_term'
   handler_settings:
-    view:
-      view_name: topics_by_track
-      display_name: entity_reference_1
-      arguments: {  }
+    target_bundles:
+      tracks: tracks
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

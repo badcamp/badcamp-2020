@@ -8,11 +8,11 @@ dependencies:
     - field.field.node.training.field_members
     - field.field.node.training.field_payment
     - field.field.node.training.field_register_capacity
-    - field.field.node.training.field_session_length
     - field.field.node.training.field_skill_level
     - field.field.node.training.field_sponsors
     - field.field.node.training.field_timeslot
     - field.field.node.training.field_training_files
+    - field.field.node.training.field_training_length
     - field.field.node.training.field_training_links
     - field.field.node.training.field_venue
     - node.type.training
@@ -28,9 +28,9 @@ third_party_settings:
   field_group:
     group_scheduling:
       children:
-        - field_session_length
         - field_venue
         - field_day
+        - field_training_length
         - field_timeslot
         - field_register_capacity
       parent_name: ''
@@ -58,7 +58,7 @@ content:
     third_party_settings: {  }
     region: content
   field_day:
-    weight: 30
+    weight: 103
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -80,17 +80,11 @@ content:
     type: badcamp_payment_field
     region: content
   field_register_capacity:
-    weight: 32
+    weight: 106
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
-    region: content
-  field_session_length:
-    weight: 28
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_skill_level:
     weight: 2
@@ -105,7 +99,7 @@ content:
     type: options_buttons
     region: content
   field_timeslot:
-    weight: 31
+    weight: 105
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -117,6 +111,12 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
+  field_training_length:
+    weight: 104
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_training_links:
     weight: 6
     settings:
@@ -126,7 +126,7 @@ content:
     type: link_default
     region: content
   field_venue:
-    weight: 29
+    weight: 102
     settings: {  }
     third_party_settings: {  }
     type: options_select

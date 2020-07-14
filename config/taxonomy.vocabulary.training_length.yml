@@ -1,0 +1,8 @@
+uuid: b1f15c3c-a616-4b53-a13d-9191e546238c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Training Length'
+vid: training_length
+description: ''
+weight: 0
