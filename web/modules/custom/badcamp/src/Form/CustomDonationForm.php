@@ -25,15 +25,20 @@ class CustomDonationForm extends FormBase {
     $form['container']['input'] = [
       '#type' => 'number',
       '#title' => $this->t('Donation Amount'),
-      '#required' => TRUE,
+      '#required' => true,
       '#min' => 10,
       '#step' => .01,
+      '#attributes' => [
+        'placeholder' => '$10.00',
+      ],
+      '#prefix' => '<div class="grid-x grid-padding-x align-center"><div class="row cell small-12 medium-6">',
+      '#suffix' => '</div></div>',
     ];
 
     $form['cancel'] = [
       '#type' => 'link',
-      '#title' => $this->t('Skip'),
-      '#url' => Url::fromRoute('badcamp_register.page', ['type' => 'confirm']),
+      '#title' => $this->t("Skip"),
+      '#url' => Url::fromRoute('badcamp_register.page', ['page' => 'confirm']),
     ];
 
     $form['container']['submit'] = [
@@ -65,7 +70,7 @@ class CustomDonationForm extends FormBase {
     $element = $form['container'];
     $amount = $form_state->getValue('input');
 
-    if ($amount !== NULL){
+    if ($amount !== NULL && $amount >= 10){
       $url = Url::fromRoute('badcamp.payment',
         ['type' => 'custom_badcamp_payment_sponsorship'],
         ['query' => ['amount' => $amount]]
@@ -86,6 +91,11 @@ class CustomDonationForm extends FormBase {
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
     parent::validateForm($form, $form_state);
+
+    $amount = $form_state->getValue('input');
+    if ($amount < 10) {
+      $form_state->setErrorByName('input', $this->t('Minimum Donation amount is @amount.', ['@amount' => '$10.00']));
+    }
   }
 
   /**
