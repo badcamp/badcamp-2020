@@ -49,6 +49,12 @@ textarea {
   label {
     font-weight: 600;
     color: $navy;
+
+    &.form-required:after {
+      content: " *";
+      font-size: 20px;
+      color: $salmon;
+    }
   }
 
   .field-prefix {
