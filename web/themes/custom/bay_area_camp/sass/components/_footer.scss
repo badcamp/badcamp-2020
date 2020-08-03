@@ -9,7 +9,7 @@ footer {
       text-align: center;
       font-family: $fairplex-wide;
       font-size: 1.125em;
-      @include breakpoint('medium') {
+      @include breakpoint("medium") {
         text-align: right;
       }
     }
@@ -17,7 +17,7 @@ footer {
 
   #block-footerbanner {
     display: none;
-    @include breakpoint('medium') {
+    @include breakpoint("medium") {
       display: block;
     }
     img {
@@ -29,13 +29,11 @@ footer {
 #block-seeyouinoctober {
   p {
     text-align: center;
-
-    text-transform: uppercase;
     font-family: $monsterrat;
     font-weight: 700;
     font-size: 1.125rem;
 
-    @include breakpoint('medium') {
+    @include breakpoint("medium") {
       text-align: left;
     }
   }

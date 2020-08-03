@@ -1,6 +1,6 @@
-input[type='text'],
-input[type='email'],
-input[type='password'],
+input[type="text"],
+input[type="email"],
+input[type="password"],
 textarea {
   box-shadow: none;
   margin: 0.25em 0 0.5em;
@@ -16,17 +16,16 @@ textarea {
 
 .fieldset-legend {
   font-weight: 600;
-  text-transform: uppercase;
   color: $dark-salmon;
   font-size: rem-calc(18);
 }
 
 #edit-field-session-length--wrapper,
-#edit-field-do-you-identify--wrapper{
+#edit-field-do-you-identify--wrapper {
   .fieldset-legend {
     display: block;
     margin: 0;
-    font-size: .875rem;
+    font-size: 0.875rem;
     line-height: 1.8;
     font-weight: 600;
     color: $navy;

@@ -11,7 +11,6 @@
 .field__label {
   font-family: $monsterrat;
   font-weight: 600;
-  text-transform: uppercase;
   color: $navy;
   font-size: rem-calc(16);
 }
@@ -21,6 +20,6 @@
   margin-right: 8px;
 
   &:after {
-    content: ':';
+    content: ":";
   }
 }
