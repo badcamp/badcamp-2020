@@ -24,7 +24,9 @@ function badcamp_register_theme($existing, $type, $theme, $path) {
  * Implements hook_form_FORM_ID_alter().
  */
 function badcamp_register_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+  $form["field_organization_url"]["widget"][0]["uri"]["#description"] = '';
   $form['actions']['submit']['#submit'][] = 'badcamp_register_redirect_submit';
+  $form['#after_build'][] = '_modify_user_register_form';
 }
 
 /**
@@ -33,4 +35,12 @@ function badcamp_register_form_user_register_form_alter(&$form, &$form_state, $f
 function badcamp_register_redirect_submit(&$form, FormStateInterface &$form_state) {
   $redirect_url = Url::fromRoute('badcamp_register.page', ['page' => 'sponsor']);
   $form_state->setRedirectUrl($redirect_url);
+}
+
+/**
+ * Modify the form element data field.
+ */
+function _modify_user_register_form($form_element, FormStateInterface $form_state) {
+
+  return $form_element;
 }

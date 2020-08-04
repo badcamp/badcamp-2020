@@ -1,8 +1,12 @@
+uuid: b58b3ab7-500f-4781-ab8d-13f7313c000e
 langcode: en
 status: open
 dependencies:
   module:
     - honeypot
+third_party_settings:
+  honeypot:
+    honeypot: true
 open: null
 close: null
 weight: 0
@@ -212,7 +216,5 @@ handlers:
       sender_name: ''
       theme_name: ''
       parameters: {  }
-uuid: b58b3ab7-500f-4781-ab8d-13f7313c000e
-third_party_settings:
-  honeypot:
-    honeypot: true
+      exclude_attachments: false
+variants: {  }

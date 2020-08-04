@@ -35,10 +35,13 @@ class CustomDonationForm extends FormBase {
       '#suffix' => '</div></div>',
     ];
 
-    $form['cancel'] = [
+    $form['container']['cancel'] = [
       '#type' => 'link',
       '#title' => $this->t("Skip"),
       '#url' => Url::fromRoute('badcamp_register.page', ['page' => 'confirm']),
+      '#attributes' => [
+        'class'=> ['button', 'secondary', 'margin-right-2'],
+      ]
     ];
 
     $form['container']['submit'] = [
@@ -47,7 +50,10 @@ class CustomDonationForm extends FormBase {
       '#ajax' => [
         'callback' => '::ajaxResponse',
         'wrapper' => 'box-container'
-      ]
+      ],
+      '#attributes' => [
+        'class' => ['margin-left-2'],
+      ],
     ];
 
 
