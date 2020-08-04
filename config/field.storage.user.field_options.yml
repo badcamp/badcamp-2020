@@ -13,10 +13,10 @@ settings:
   allowed_values:
     -
       value: list
-      label: 'List Me on the Attendees Page'
+      label: 'List me on the attendee page'
     -
       value: jobs
-      label: 'I am interested in Drupal Jobs'
+      label: 'I am interested in DrupaljJobs'
     -
       value: sponsors
       label: 'I am interested in hearing from sponsors'
@@ -25,7 +25,7 @@ settings:
       label: 'I am Interested In volunteering'
     -
       value: share
-      label: 'Share My Schedule With Others'
+      label: 'Share my schedule with others'
   allowed_values_function: ''
 module: options
 locked: false

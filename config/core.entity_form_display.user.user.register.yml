@@ -13,9 +13,11 @@ dependencies:
     - field.field.user.user.field_social_profile_links
     - field.field.user.user.field_subscribe_to_badcamp_newsl
     - field.field.user.user.field_title
+    - field.field.user.user.field_user_notes
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - allowed_formats
     - field_group
     - image
     - link
@@ -28,15 +30,19 @@ third_party_settings:
   field_group:
     group_account_information:
       children:
-        - account
+        - group_group
+        - group_password
+        - roles
+        - status
       parent_name: ''
-      weight: 0
+      weight: 5
       format_type: fieldset
       format_settings:
-        id: ''
-        classes: ''
+        label: 'Account Information'
         description: ''
         required_fields: true
+        id: ''
+        classes: ''
       label: 'Account Information'
     group_personal_information:
       children:
@@ -47,13 +53,14 @@ third_party_settings:
         - group_options_group
         - field_social_profile_links
       parent_name: ''
-      weight: 1
+      weight: 6
       format_type: fieldset
       format_settings:
-        id: ''
-        classes: ''
+        label: 'Personal Information'
         description: ''
         required_fields: true
+        id: ''
+        classes: ''
       label: 'Personal Information'
     group_name:
       children:
@@ -63,8 +70,7 @@ third_party_settings:
       weight: 20
       format_type: html_element
       format_settings:
-        id: ''
-        classes: 'cell small-12 medium-6'
+        label: Name
         element: div
         show_label: false
         label_element: h3
@@ -72,6 +78,8 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'grid-x grid-margin-x'
       label: Name
     group_first_name_wrapper:
       children:
@@ -112,9 +120,8 @@ third_party_settings:
         - group_org_wrapper
         - group_org_website_wrapper
         - group_title_wrapper
-        - field_title
       parent_name: group_personal_information
-      weight: 23
+      weight: 24
       format_type: html_element
       format_settings:
         id: ''
@@ -162,7 +169,8 @@ third_party_settings:
         speed: fast
       label: 'Org Website Wrapper'
     group_title_wrapper:
-      children: {  }
+      children:
+        - field_title
       parent_name: group_organization_wrapper
       weight: 22
       format_type: html_element
@@ -181,7 +189,7 @@ third_party_settings:
       children:
         - field_options
       parent_name: group_personal_information
-      weight: 24
+      weight: 25
       format_type: html_element
       format_settings:
         id: ''
@@ -194,6 +202,79 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Options Group'
+    group_group:
+      children:
+        - group_username
+        - group_email
+      parent_name: group_account_information
+      weight: 20
+      format_type: html_element
+      format_settings:
+        label: Group
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'grid-x grid-margin-x'
+      label: Group
+    group_password:
+      children:
+        - pass
+      parent_name: group_account_information
+      weight: 21
+      format_type: html_element
+      format_settings:
+        label: Password
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: Password
+    group_email:
+      children:
+        - mail
+      parent_name: group_group
+      weight: 22
+      format_type: html_element
+      format_settings:
+        label: Email
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'cell small-12 medium-6'
+      label: Email
+    group_username:
+      children:
+        - name
+      parent_name: group_group
+      weight: 20
+      format_type: html_element
+      format_settings:
+        label: Username
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'cell small-12 medium-6'
+      label: Username
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.register
@@ -207,11 +288,14 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_bio:
-    weight: 21
+    weight: 22
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
     type: text_textarea
     region: content
   field_first_name:
@@ -253,13 +337,13 @@ content:
     type: link_default
     region: content
   field_social_profile_links:
-    weight: 25
+    weight: 26
     settings: {  }
     third_party_settings: {  }
     type: social_media_links_field_default
     region: content
   field_subscribe_to_badcamp_newsl:
-    weight: 2
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: mailchimp_lists_select
@@ -272,9 +356,34 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  mail:
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pass:
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  roles:
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -284,10 +393,13 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    weight: 22
+    weight: 23
     region: content
 hidden:
   contact: true
+  current_pass: true
+  field_user_notes: true
   google_analytics: true
   language: true
+  notify: true
   timezone: true

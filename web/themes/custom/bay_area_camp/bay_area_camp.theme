@@ -125,3 +125,12 @@ function bay_area_camp_preprocess_html(array &$variables) {
     $variables['attributes']['class'][] = 'page-node--' . $node->id();
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function bay_area_camp_theme_suggestions_form_element_alter(&$suggestions, $vars){
+  $name = trim(str_ireplace(['[',']','-'], '_', $vars['element']['#name']), '_');
+  $suggestions[] = 'form_element__' . $vars['element']['#type'];
+  $suggestions[] = 'form_element__' . $vars['element']['#type'] . '__' . $name;
+}

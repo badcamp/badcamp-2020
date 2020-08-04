@@ -3,7 +3,7 @@ name: 'Bay Area Drupal Camp'
 mail: info@badcamp.org
 slogan: ''
 page:
-  403: /not-found
+  403: ''
   404: /not-found
   front: /front
 admin_compact_mode: false
