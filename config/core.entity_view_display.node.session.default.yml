@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.session.field_timeslot
     - field.field.node.session.field_track
     - field.field.node.session.field_twitter_description
+    - field.field.node.session.field_unique_content
     - field.field.node.session.field_venue
     - node.type.session
   module:
@@ -143,6 +144,16 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_unique_content:
+    weight: 116
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_venue:
     weight: 111

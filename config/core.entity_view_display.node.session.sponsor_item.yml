@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.session.field_timeslot
     - field.field.node.session.field_track
     - field.field.node.session.field_twitter_description
+    - field.field.node.session.field_unique_content
     - field.field.node.session.field_venue
     - node.type.session
   module:
@@ -90,4 +91,5 @@ hidden:
   field_status: true
   field_track: true
   field_twitter_description: true
+  field_unique_content: true
   links: true
