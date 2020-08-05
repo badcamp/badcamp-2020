@@ -16,7 +16,7 @@ field_name: field_unique_content
 entity_type: node
 bundle: session
 label: 'Have you presented this session at another Drupal camp during the past nine months?'
-description: 'We are looking to present as much unique content as possible.'
+description: 'We would love unique content to make our camp distinctly different.'
 required: true
 translatable: false
 default_value:
