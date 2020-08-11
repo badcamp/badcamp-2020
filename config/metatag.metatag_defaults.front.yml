@@ -7,7 +7,7 @@ _core:
 id: front
 label: 'Front page'
 tags:
+  description: 'Join us virtually on Hopin from October 14th to 17th for BADCamp 2020!'
   title: 'Bay Area Drupal Camp | Oct 14-17, 2020'
-  description: 'Join us October 14-17, 2020 for BADCAMP. It will be taking place this year at the Hotel Shattuck in Berkley, CA. '
   canonical_url: '[site:url]'
   shortlink: '[site:url]'

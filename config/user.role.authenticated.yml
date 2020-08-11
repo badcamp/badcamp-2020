@@ -14,8 +14,10 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'access user profiles'
+  - 'create session content'
   - currency.currency.view
   - currency.currency_locale.view
+  - 'delete own session content'
   - 'edit own session content'
   - 'flag add_to_schedule'
   - 'post comments'
