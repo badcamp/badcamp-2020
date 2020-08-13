@@ -8,7 +8,7 @@
 
 // sponsors view
 .views-group--sponsors {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   @include breakpoint('medium') {
     justify-content: center;
     align-items: center;
@@ -33,7 +33,21 @@
   a {
     border-bottom: none;
   }
+
+  .sponsor-logo {
+    img {
+      max-width: 280px;
+    }
+  }
+  .sponsor-logo--in-kind-sponsor {
+    img {
+      max-height: 90px;
+      width: auto;
+    }
+  }
 }
+
+
 
 // sponsors footer block
 #block-views-block-sponsors-core-sponsors {
