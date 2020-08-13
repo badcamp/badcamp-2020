@@ -10,7 +10,7 @@
 %}
 
 {% set level = content.field_sponsor_level|render|striptags|trim|lower|replace(' ', '-') %}
-{% set logo_classes = 'sponsor-logo sponsor-logo--' ~ level %}
+{% set logo_classes = 'sponsors-logo sponsor-logo--' ~ level %}
 
 <article{{attributes.addClass(classes)}}>
 
