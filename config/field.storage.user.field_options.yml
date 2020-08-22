@@ -16,13 +16,13 @@ settings:
       label: 'List me on the attendee page'
     -
       value: jobs
-      label: 'I am interested in DrupaljJobs'
+      label: 'I am interested in Drupal Jobs'
     -
       value: sponsors
       label: 'I am interested in hearing from sponsors'
     -
       value: volunteer
-      label: 'I am Interested In volunteering'
+      label: 'I am interested In volunteering'
     -
       value: share
       label: 'Share my schedule with others'
