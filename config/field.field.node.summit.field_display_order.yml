@@ -1,0 +1,29 @@
+uuid: 2e93c239-551b-47ef-825b-ec29a0339741
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_order
+    - node.type.summit
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.summit.field_display_order
+field_name: field_display_order
+entity_type: node
+bundle: summit
+label: 'Display Order'
+description: 'For ordering in views. Admins only.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
