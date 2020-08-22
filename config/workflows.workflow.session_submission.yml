@@ -2,8 +2,6 @@ uuid: 6e19de8d-2181-466a-9246-e06107bf6e2b
 langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.session
   module:
     - content_moderation
 id: session_submission
@@ -36,6 +34,5 @@ type_settings:
       from:
         - draft
         - published
-  entity_types:
-    node:
-      - session
+  entity_types: {  }
+  default_moderation_state: draft
