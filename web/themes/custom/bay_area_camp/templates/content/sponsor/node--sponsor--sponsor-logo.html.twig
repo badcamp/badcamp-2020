@@ -9,18 +9,10 @@
 ]
 %}
 
-{% set level = content.field_sponsor_level|render|striptags|trim|lower|replace(' ', '-') %}
-{% set logo_classes = 'sponsors-logo sponsor-logo--' ~ level %}
-
 <article{{attributes.addClass(classes)}}>
-
 	{{ title_prefix }}
-	<div{{content_attributes.addClass(logo_classes)}}>
+	<div{{content_attributes.addClass('sponsors-logo')}}>
 		{{ content.field_sponsor_logo }}
 	</div>
 	{{ title_suffix }}
-
-	{# {% if can_edit %}
-	        <button class="button gray edit-sponsor" href="{{ path('entity.node.edit_form', {'node': node.id}) }}">{{ "Edit" | t }} {{ label }}</button>
-	    {% endif %} #}
 </article>

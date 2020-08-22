@@ -18,6 +18,19 @@
     },
   };
 
+  Drupal.behaviors.sponsorLogos = {
+    attach: function (context) {
+      // Remove link from in-kind sponsor logos.
+      var inKindLogo = $(".views-group--sponsors.in-kind-sponsor .sponsors-logo");
+
+      $(context)
+        .find(inKindLogo)
+        .each(function () {
+          $(this).find("img").unwrap();
+        });
+    },
+  };
+
   Drupal.behaviors.sessionSubmission = {
     attach: function (context) {
       // Hide submit session button from header menu when on session add form.
