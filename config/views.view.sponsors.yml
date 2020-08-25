@@ -8,7 +8,7 @@ dependencies:
     - taxonomy.vocabulary.sponsor_level
     - user.role.administrator
   content:
-    - 'taxonomy_term:sponsor_level:e5cad56d-55dd-4e87-9b2a-87681448363d'
+    - 'taxonomy_term:sponsor_level:89afc9aa-4c73-4c4b-b10d-76e3033d2cdd'
   module:
     - node
     - taxonomy
@@ -155,7 +155,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            1: 1
+            131: 131
           group: 1
           exposed: false
           expose:
@@ -164,6 +164,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -171,8 +173,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
