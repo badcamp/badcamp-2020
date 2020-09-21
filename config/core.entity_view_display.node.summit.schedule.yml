@@ -14,21 +14,12 @@ dependencies:
     - field.field.node.summit.field_venue
     - node.type.summit
   module:
-    - text
     - user
 id: node.summit.schedule
 targetEntityType: node
 bundle: summit
 mode: schedule
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 5
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
   field_day:
     type: entity_reference_label
     weight: 0
@@ -71,11 +62,12 @@ content:
     type: entity_reference_label
     region: content
   flag_add_to_schedule:
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   field_display_order: true
   field_register_capacity: true
   links: true

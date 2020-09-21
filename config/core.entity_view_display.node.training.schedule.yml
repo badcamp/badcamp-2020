@@ -19,21 +19,12 @@ dependencies:
     - node.type.training
   module:
     - badcamp
-    - text
     - user
 id: node.training.schedule
 targetEntityType: node
 bundle: training
 mode: schedule
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 3
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
   field_day:
     type: entity_reference_label
     weight: 2
@@ -43,7 +34,7 @@ content:
       link: true
     third_party_settings: {  }
   field_members:
-    weight: 5
+    weight: 4
     label: visually_hidden
     settings:
       link: true
@@ -52,13 +43,13 @@ content:
     region: content
   field_payment:
     type: badcamp_payment_field
-    weight: 7
+    weight: 6
     region: content
     label: visually_hidden
     settings: {  }
     third_party_settings: {  }
   field_skill_level:
-    weight: 4
+    weight: 3
     label: visually_hidden
     settings:
       link: true
@@ -82,11 +73,12 @@ content:
     type: entity_reference_label
     region: content
   flag_add_to_schedule:
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   field_register_capacity: true
   field_sponsors: true
   field_training_files: true
