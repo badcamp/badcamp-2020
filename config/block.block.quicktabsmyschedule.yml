@@ -1,0 +1,20 @@
+uuid: bbf4f32b-fda4-40b4-8594-cc33d603f58c
+langcode: en
+status: true
+dependencies:
+  module:
+    - quicktabs
+  theme:
+    - bay_area_camp
+id: quicktabsmyschedule
+theme: bay_area_camp
+region: offcanvas
+weight: 0
+provider: null
+plugin: 'quicktabs_block:my_schedule'
+settings:
+  id: 'quicktabs_block:my_schedule'
+  label: 'My Schedule'
+  provider: quicktabs
+  label_display: visible
+visibility: {  }

@@ -1,6 +1,6 @@
 uuid: 063f6497-ec05-4607-afee-8704ec251dd8
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.schedule
