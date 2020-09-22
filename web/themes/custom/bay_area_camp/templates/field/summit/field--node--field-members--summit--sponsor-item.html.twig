@@ -5,17 +5,17 @@
   ]
 %}
 
-<div{{ attributes }}>
-  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-  <div{{ attributes.addClass('field__items')}}>
-    {% for item in items %}
-      {% if loop.last %}
-        {% set separator = '' %}
-      {% else %}
-        {% set separator = ' // ' %}
-      {% endif %}
+<div{{attributes}}>
+	<div{{title_attributes.addClass(title_classes)}}>{{ label }}</div>
+	<div{{attributes.addClass('field__items')}}>
+		{% for item in items %}
+			{% if loop.last %}
+				{% set separator = '' %}
+			{% else %}
+				{% set separator = ' // ' %}
+			{% endif %}
 
-      <span{{ item.attributes.addClass('field__item') }}>{{ item.content }}{{ separator }}</span>
-    {% endfor %}
-  </div>
+			<span{{item.attributes.addClass('field__item')}}>{{ item.content }}{{ separator }}</span>
+		{% endfor %}
+	</div>
 </div>
