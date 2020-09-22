@@ -52,7 +52,7 @@ content:
     weight: 3
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -68,7 +68,7 @@ content:
     weight: 1
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
