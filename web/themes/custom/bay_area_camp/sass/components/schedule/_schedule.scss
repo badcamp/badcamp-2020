@@ -10,7 +10,7 @@
       font-size: rem-calc(16);
       font-weight: 700;
       text-align: center;
-      margin-right: rem-calc(12);
+      margin-right: rem-calc(8);
       margin-left: -2px;
 
       a {
@@ -88,8 +88,9 @@ h3.schedule__time-slot {
   padding: rem-calc(6 12 4);
 }
 
-h2.schedule-title {
+h4.schedule-title {
   font-size: rem-calc(21);
+  margin-bottom: 0;
   a:hover {
     color: $midblue;
   }
@@ -97,7 +98,7 @@ h2.schedule-title {
 
 .event-details-inline {
   display: flex;
-  margin: rem-calc(20 0);
+  margin: rem-calc(20 0 16);
 
   .field__item {
     a:hover {
