@@ -1,79 +1,125 @@
-.time-slot,
-.schedule-day {
-  margin-top: 2.5em;
-  margin-bottom: 1em;
-  font-size: rem-calc(28);
-  font-weight: 700;
-  text-transform: uppercase;
-  border-bottom: 4px solid $salmon;
-
-  &:first-of-type {
-    margin-top: 1em;
-  }
-}
-
 // Schedule Tabs
 #quicktabs-schedule {
   .quicktabs-tabs {
-    @include xy-grid;
-    margin: 2.5em 0;
-    border-bottom: 3px solid $grayish;
-    padding: 0;
+    margin: rem-calc(30 0 20);
+    padding: rem-calc(0 0 5);
+    border-bottom: 1px solid $dark-salmon;
+
     li {
-      @include xy-cell();
-      width: 100%;
       font-family: $monsterrat;
-      font-size: rem-calc(26);
+      font-size: rem-calc(16);
       font-weight: 700;
       text-align: center;
-      text-transform: uppercase;
-      padding: 0.5em;
-      margin: 0;
-
-      @include breakpoint('medium') {
-        width: 25%;
-      }
+      margin-right: rem-calc(12);
+      margin-left: -2px;
 
       a {
         border-bottom: none;
+        padding: rem-calc(10 16);
+        background: $grayish;
 
         &:hover {
-          color: $midblue;
+          background-color: $dark-salmon;
+          color: $white;
         }
       }
 
       &.active {
-        background: $grayish;
         a {
-          color: $dark-salmon;
+          background-color: $dark-salmon;
+          color: $white;
         }
       }
     }
   }
 }
 
-// Schedule Filters
-.schedule-view {
-  legend {
-    text-align: center;
-    margin-bottom: 1em;
-  }
+// Schedule filters.
+#views-exposed-form-schedule-general {
   .fieldset-legend {
-    color: $dark-salmon;
-    font-size: rem-calc(24);
-    font-weight: 700;
+    @extend .visually-hidden;
   }
-  #edit-topics {
-    text-align: center;
-    width: 96%;
-    margin: 0 auto;
-    margin-bottom: 1em;
+  #edit-topics,
+  #edit-topics--2,
+  #edit-topics--3,
+  #edit-topics--4 {
+    padding: rem-calc(8 16 8 20);
+    column-count: 2;
+    @include breakpoint(large) {
+      column-count: 4;
+    }
+    @include breakpoint(xlarge) {
+      column-count: 5;
+    }
+
     .form-item {
-      display: inline-block;
-      margin: 5px 3px;
+      margin-bottom: 0;
+      label {
+        font-size: rem-calc(13);
+        font-weight: 600;
+      }
     }
-    [type='checkbox'] + label {
-      margin-left: 2px;
+  }
+}
+
+// Schedule items.
+.schedule-view {
+  .views-row {
+    margin: 0;
+    padding: rem-calc(0 16);
+    .schedule-display {
+      border-top: 1px solid #e2e2e2;
+      padding: rem-calc(16 0 8);
     }
+  }
+
+  h3.schedule__time-slot + .views-row {
+    .schedule-display {
+      border-top: none;
+    }
+  }
+}
+
+h3.schedule__time-slot {
+  font-size: rem-calc(18);
+  font-weight: 700;
+  color: white;
+  background-color: $dark-salmon;
+  padding: rem-calc(6 12 4);
+}
+
+h2.schedule-title {
+  font-size: rem-calc(21);
+  a:hover {
+    color: $midblue;
+  }
+}
+
+.event-details-inline {
+  display: flex;
+  margin: rem-calc(20 0);
+
+  .field__item {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.event-details-inline__field {
+  font-family: $monsterrat;
+  font-weight: 600;
+  font-size: rem-calc(14);
+  display: flex;
+  margin-right: rem-calc(26);
+  i {
+    color: $dark-salmon;
+    font-size: rem-calc(16);
+    width: 1em;
+    text-align: center;
+    margin-right: rem-calc(6);
+  }
+  .separator {
+    color: $dark-salmon;
   }
 }
