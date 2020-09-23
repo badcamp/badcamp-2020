@@ -12,10 +12,16 @@
 			{% if loop.last %}
 				{% set separator = '' %}
 			{% else %}
-				{% set separator = ' // ' %}
+				{% set separator = ' / ' %}
 			{% endif %}
 
-			<span{{item.attributes.addClass('field__item')}}>{{ item.content }}{{ separator }}</span>
+			<span{{item.attributes.addClass('field__item')}}>
+				{{ item.content }}
+				<span class='separator'>
+					{{ separator }}
+				</span>
+			</span>
+
 		{% endfor %}
 	</div>
 </div>

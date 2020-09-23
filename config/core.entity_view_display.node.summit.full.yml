@@ -70,8 +70,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  flag_add_to_schedule:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_display_order: true
   field_register_capacity: true
-  flag_add_to_schedule: true
   links: true

@@ -1,0 +1,48 @@
+<article{{attributes.addClass('schedule-display')}}>
+	<div{{content_attributes}}>
+
+		<h4 {{ title_attributes.addClass('schedule-title') }}>
+			<a href="{{ url }}" rel='bookmark'>{{ label }}</a>
+		</h4>
+
+		<div class='event-details-inline'>
+
+			{% if content.field_members|render|striptags|trim is not empty %}
+				<div class='event-details-inline__field event-details-inline__field--members'>
+					<span>
+						<i class='fa fa-user' aria-hidden='true'></i>
+					</span>
+					<span>{{ content.field_members }}</span>
+				</div>
+			{% endif %}
+
+			{% if content.field_session_topics|render|striptags|trim is not empty %}
+				<div class='event-details-inline__field event-details-inline__field--topics'>
+					<span>
+						<i class='fa fa-tags' aria-hidden='true'></i>
+					</span>
+					<span>{{ content.field_session_topics }}</span>
+				</div>
+			{% endif %}
+
+			{% if content.field_skill_level|render|striptags|trim is not empty %}
+				<div class='event-details-inline__field event-details-inline__field--skill-level'>
+					<span>
+						<i class='fa fa-star' aria-hidden='true'></i>
+					</span>
+					<span>{{ content.field_skill_level }}</span>
+				</div>
+			{% endif %}
+
+			{% if content.field_venue|render|striptags|trim is not empty %}
+				<div class='event-details-inline__field event-details-inline__field--venue'>
+					<span>
+						<i class='fa fa-map-marker' aria-hidden='true'></i>
+					</span>
+					<span>{{ content.field_venue }}</span>
+				</div>
+			{% endif %}
+		</div>
+
+	</div>
+</article>
