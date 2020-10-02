@@ -43,7 +43,7 @@ content:
     region: content
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_members:
     type: entity_reference_label
@@ -59,7 +59,7 @@ content:
     region: content
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_timeslot:
     type: entity_reference_label
@@ -67,7 +67,7 @@ content:
     region: content
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_venue:
     type: entity_reference_label
@@ -75,7 +75,7 @@ content:
     region: content
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   flag_add_to_schedule:
     weight: 6

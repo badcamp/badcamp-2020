@@ -27,7 +27,7 @@ content:
     region: content
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_sponsors:
     type: entity_reference_entity_view
@@ -44,7 +44,7 @@ content:
     region: content
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_venue:
     weight: 0

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.event.field_event_type
     - field.field.node.event.field_leader
     - field.field.node.event.field_more_info_link
+    - field.field.node.event.field_register_capacity
     - field.field.node.event.field_sponsors
     - field.field.node.event.field_timeslot
     - field.field.node.event.field_venue
@@ -36,7 +37,7 @@ content:
     region: content
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_leader:
     type: entity_reference_label
@@ -72,7 +73,7 @@ content:
     region: content
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_venue:
     type: entity_reference_label
@@ -80,7 +81,7 @@ content:
     region: content
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   flag_add_to_schedule:
     weight: 0
@@ -94,3 +95,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_event_type: true
+  field_register_capacity: true
