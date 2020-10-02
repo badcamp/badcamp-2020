@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_day
     - field.field.node.session.field_do_you_identify
+    - field.field.node.session.field_link_to_session
     - field.field.node.session.field_members
     - field.field.node.session.field_register_capacity
     - field.field.node.session.field_session_length
@@ -22,6 +23,7 @@ dependencies:
     - node.type.session
   module:
     - file
+    - link
     - options
     - text
     - user
@@ -34,12 +36,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_day:
-    weight: 110
+    weight: 11
     label: above
     settings:
       link: true
@@ -47,15 +49,27 @@ content:
     type: entity_reference_label
     region: content
   field_do_you_identify:
-    weight: 115
+    weight: 16
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_link_to_session:
+    type: link
+    weight: 18
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
   field_members:
-    weight: 102
+    weight: 3
     label: above
     settings:
       link: true
@@ -63,7 +77,7 @@ content:
     type: entity_reference_label
     region: content
   field_register_capacity:
-    weight: 112
+    weight: 13
     label: above
     settings:
       thousand_separator: ''
@@ -72,7 +86,7 @@ content:
     type: number_integer
     region: content
   field_session_length:
-    weight: 113
+    weight: 14
     label: above
     settings:
       link: true
@@ -80,7 +94,7 @@ content:
     type: entity_reference_label
     region: content
   field_session_presentation_video:
-    weight: 105
+    weight: 6
     label: above
     settings:
       responsive: true
@@ -91,7 +105,7 @@ content:
     type: video_embed_field_video
     region: content
   field_session_slides:
-    weight: 104
+    weight: 5
     label: above
     settings:
       use_description_as_link_text: true
@@ -99,7 +113,7 @@ content:
     type: file_default
     region: content
   field_session_topics:
-    weight: 103
+    weight: 4
     label: above
     settings:
       link: true
@@ -107,7 +121,7 @@ content:
     type: entity_reference_label
     region: content
   field_sponsors:
-    weight: 107
+    weight: 8
     label: above
     settings:
       link: true
@@ -115,14 +129,14 @@ content:
     type: entity_reference_label
     region: content
   field_status:
-    weight: 108
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_timeslot:
-    weight: 109
+    weight: 10
     label: above
     settings:
       link: true
@@ -130,7 +144,7 @@ content:
     type: entity_reference_label
     region: content
   field_track:
-    weight: 114
+    weight: 15
     label: above
     settings:
       link: true
@@ -138,7 +152,7 @@ content:
     type: entity_reference_label
     region: content
   field_twitter_description:
-    weight: 106
+    weight: 7
     label: above
     settings:
       link_to_entity: false
@@ -146,7 +160,7 @@ content:
     type: string
     region: content
   field_unique_content:
-    weight: 116
+    weight: 17
     label: above
     settings:
       format: default
@@ -156,7 +170,7 @@ content:
     type: boolean
     region: content
   field_venue:
-    weight: 111
+    weight: 12
     label: above
     settings:
       link: true
@@ -164,12 +178,12 @@ content:
     type: entity_reference_label
     region: content
   flag_add_to_schedule:
-    weight: 10
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   links:
-    weight: 100
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

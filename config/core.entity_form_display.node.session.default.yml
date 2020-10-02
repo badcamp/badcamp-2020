@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_day
     - field.field.node.session.field_do_you_identify
+    - field.field.node.session.field_link_to_session
     - field.field.node.session.field_members
     - field.field.node.session.field_register_capacity
     - field.field.node.session.field_session_length
@@ -24,6 +25,7 @@ dependencies:
     - content_moderation
     - field_group
     - file
+    - link
     - multiple_selects
     - path
     - text
@@ -85,6 +87,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_link_to_session:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_members:
     weight: 8
