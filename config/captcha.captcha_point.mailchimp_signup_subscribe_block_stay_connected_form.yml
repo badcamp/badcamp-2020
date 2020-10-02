@@ -1,0 +1,7 @@
+uuid: c4da63ed-264a-47fc-9222-677a38224810
+langcode: en
+status: true
+dependencies: {  }
+formId: mailchimp_signup_subscribe_block_stay_connected_form
+captchaType: recaptcha/reCAPTCHA
+label: mailchimp_signup_subscribe_block_stay_connected_form
