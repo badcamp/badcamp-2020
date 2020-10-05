@@ -52,7 +52,10 @@
 							{% else %}
 								{% set location = 'https://hopin.to/events/badcamp-2020-sessions' %}
 							{% endif %}
-							<a href="{{ location }}" target='_blank'>{{ content.field_venue }}</a>
+							<a href="{{ location }}" target='_blank'>
+								{{ content.field_venue }}
+								<span class='visually-hidden'>(link is external)</span>
+							</a>
 						{% else %}
 							<span>{{ content.field_venue }}</span>
 						{% endif %}

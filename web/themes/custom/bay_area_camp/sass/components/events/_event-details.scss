@@ -14,7 +14,7 @@
 }
 
 .field__add__to__schedule {
-  // margin-top: 1.5em;
+  margin-top: 1.5em;
 }
 .flag-add-to-schedule {
   i {
@@ -31,6 +31,12 @@
     width: 1em;
     text-align: center;
     margin-right: 0.5em;
+  }
+  a {
+    border-bottom: 2px solid $lightblue;
+    &:hover {
+      border-bottom: 2px solid $dark-salmon;
+    }
   }
 }
 
