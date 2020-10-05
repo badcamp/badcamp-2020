@@ -3,7 +3,6 @@
 
 <article{{attributes.addClass('schedule-display')}}>
 	<div{{content_attributes}}>
-
 		<h4 {{ title_attributes.addClass('schedule-title') }}>
 			<a href="{{ url }}" rel='bookmark'>{{ label }}</a>
 		</h4>
@@ -46,7 +45,11 @@
 						{% if event_link is not empty %}
 							{% set location = event_link %}
 						{% else %}
-							{% set location = 'https://hopin.to/events/badcamp-2020-sessions' %}
+							{% if content_type == 'summit' %}
+								{% set location = 'https://hopin.to/events/badcamp-2020-trainings-summits' %}
+							{% else %}
+								{% set location = 'https://hopin.to/events/badcamp-2020-sessions' %}
+							{% endif %}
 						{% endif %}
 						<a href="{{ location }}" target='_blank'>
 							{{ content.field_venue }}
