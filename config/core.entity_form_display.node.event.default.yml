@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.field_day
     - field.field.node.event.field_event_type
     - field.field.node.event.field_leader
+    - field.field.node.event.field_link_to_event
     - field.field.node.event.field_more_info_link
     - field.field.node.event.field_register_capacity
     - field.field.node.event.field_sponsors
@@ -14,6 +15,7 @@ dependencies:
     - field.field.node.event.field_venue
     - node.type.event
   module:
+    - content_moderation
     - field_group
     - link
     - text
@@ -22,6 +24,7 @@ third_party_settings:
     group_scheduling:
       children:
         - field_venue
+        - field_link_to_event
         - field_day
         - field_timeslot
         - field_register_capacity
@@ -50,7 +53,7 @@ content:
     third_party_settings: {  }
     region: content
   field_day:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -71,6 +74,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_link_to_event:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_more_info_link:
     weight: 5
     settings:
@@ -80,7 +91,7 @@ content:
     type: link_default
     region: content
   field_register_capacity:
-    weight: 9
+    weight: 10
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -93,7 +104,7 @@ content:
     type: options_select
     region: content
   field_timeslot:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -117,6 +128,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
