@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_day
     - field.field.node.session.field_do_you_identify
-    - field.field.node.session.field_link_to_session
+    - field.field.node.session.field_link_to_event
     - field.field.node.session.field_members
     - field.field.node.session.field_register_capacity
     - field.field.node.session.field_session_length
@@ -23,6 +23,7 @@ dependencies:
     - field.field.node.session.field_venue
     - node.type.session
   module:
+    - link
     - text
     - user
 id: node.session.schedule_sidebar
@@ -33,21 +34,33 @@ content:
   body:
     label: hidden
     type: text_trimmed
-    weight: 3
+    weight: 4
     settings:
       trim_length: 300
     third_party_settings: {  }
     region: content
+  field_link_to_event:
+    type: link
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
   field_members:
     type: entity_reference_label
-    weight: 1
+    weight: 2
     region: content
     label: visually_hidden
     settings:
       link: true
     third_party_settings: {  }
   field_session_topics:
-    weight: 2
+    weight: 3
     label: visually_hidden
     settings:
       link: false
@@ -63,14 +76,13 @@ content:
     type: entity_reference_label
     region: content
   flag_add_to_schedule:
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_day: true
   field_do_you_identify: true
-  field_link_to_session: true
   field_register_capacity: true
   field_session_length: true
   field_session_presentation_video: true

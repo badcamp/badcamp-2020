@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.summit.body
     - field.field.node.summit.field_day
     - field.field.node.summit.field_display_order
-    - field.field.node.summit.field_link_to_summit
+    - field.field.node.summit.field_link_to_event
     - field.field.node.summit.field_members
     - field.field.node.summit.field_register_capacity
     - field.field.node.summit.field_sponsors
@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.summit.field_venue
     - node.type.summit
   module:
+    - link
     - text
     - user
 id: node.summit.teaser
@@ -25,7 +26,7 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 4
+    weight: 5
     settings:
       trim_length: 600
     third_party_settings: {  }
@@ -38,9 +39,21 @@ content:
     settings:
       link: false
     third_party_settings: {  }
+  field_link_to_event:
+    type: link
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
   field_members:
     type: entity_reference_label
-    weight: 3
+    weight: 4
     region: content
     label: visually_hidden
     settings:
@@ -48,7 +61,7 @@ content:
     third_party_settings: {  }
   field_sponsors:
     type: entity_reference_entity_view
-    weight: 5
+    weight: 6
     region: content
     label: above
     settings:
@@ -72,16 +85,15 @@ content:
       link: false
     third_party_settings: {  }
   flag_add_to_schedule:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   links:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_display_order: true
-  field_link_to_summit: true
   field_register_capacity: true

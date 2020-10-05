@@ -1,9 +1,9 @@
-uuid: 614f87c3-2429-45ca-b828-68effac62af2
+uuid: a7c968a3-b2cc-4e0a-b48b-41d909737408
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_link_to_session
+    - field.storage.node.field_link_to_event
     - node.type.session
   module:
     - custom_add_another
@@ -12,14 +12,14 @@ third_party_settings:
   custom_add_another:
     custom_add_another: ''
     custom_remove: ''
-id: node.session.field_link_to_session
-field_name: field_link_to_session
+id: node.session.field_link_to_event
+field_name: field_link_to_event
 entity_type: node
 bundle: session
-label: 'Link to Session'
+label: 'Link to Event'
 description: 'Direct link to session within Hopin. Hopin venue tag will link here. If this field is left blank, link will go to front page of Hopin event. '
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

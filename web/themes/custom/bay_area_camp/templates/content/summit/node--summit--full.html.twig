@@ -32,8 +32,8 @@
 							<i class='fa fa-map-marker' aria-hidden='true'></i>
 						</span>
 						{% if content.field_venue|render|striptags|trim == 'Hopin' or content.field_venue|render|striptags|trim == 'Zoom' %}
-							{% if content.field_link_to_summit|render|striptags|trim is not empty %}
-								{% set location = content.field_link_to_summit|render|striptags|trim %}
+							{% if content.field_link_to_event|render|striptags|trim is not empty %}
+								{% set location = content.field_link_to_event|render|striptags|trim %}
 							{% else %}
 								{% set location = 'https://hopin.to/events/badcamp-2020-trainings-summits' %}
 							{% endif %}

@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.summit.body
     - field.field.node.summit.field_day
     - field.field.node.summit.field_display_order
-    - field.field.node.summit.field_link_to_summit
+    - field.field.node.summit.field_link_to_event
     - field.field.node.summit.field_members
     - field.field.node.summit.field_register_capacity
     - field.field.node.summit.field_sponsors
@@ -24,7 +24,7 @@ third_party_settings:
     group_scheduling:
       children:
         - field_venue
-        - field_link_to_summit
+        - field_link_to_event
         - field_day
         - field_timeslot
         - field_register_capacity
@@ -65,7 +65,7 @@ content:
     third_party_settings: {  }
     type: number
     region: content
-  field_link_to_summit:
+  field_link_to_event:
     weight: 12
     settings:
       placeholder_url: ''

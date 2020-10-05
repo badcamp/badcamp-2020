@@ -1,4 +1,4 @@
-uuid: a9da2890-f70c-4daf-996a-7524ea9e8c33
+uuid: b3679bee-be15-490a-bca0-66acaf683b50
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_link_to_session
-field_name: field_link_to_session
+id: node.field_link_to_event
+field_name: field_link_to_event
 entity_type: node
 type: link
 settings: {  }

@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_day
     - field.field.node.session.field_do_you_identify
-    - field.field.node.session.field_link_to_session
+    - field.field.node.session.field_link_to_event
     - field.field.node.session.field_members
     - field.field.node.session.field_register_capacity
     - field.field.node.session.field_session_length
@@ -48,7 +48,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-  field_link_to_session:
+  field_link_to_event:
     type: link
     weight: 2
     region: content
