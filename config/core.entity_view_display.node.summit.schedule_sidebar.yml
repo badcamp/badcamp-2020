@@ -53,7 +53,7 @@ content:
     third_party_settings: {  }
   field_venue:
     weight: 0
-    label: visually_hidden
+    label: hidden
     settings:
       link: false
     third_party_settings: {  }

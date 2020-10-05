@@ -21,7 +21,8 @@
     margin-right: 10px;
   }
 }
-.event-details__field {
+.event-details__field,
+.event-details-inline__field {
   display: flex;
   align-items: center;
   margin: 10px 0;
@@ -36,6 +37,7 @@
     border-bottom: 2px solid $lightblue;
     &:hover {
       border-bottom: 2px solid $dark-salmon;
+      text-decoration: none;
     }
   }
 }
