@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.summit.body
     - field.field.node.summit.field_day
     - field.field.node.summit.field_display_order
+    - field.field.node.summit.field_link_to_summit
     - field.field.node.summit.field_members
     - field.field.node.summit.field_register_capacity
     - field.field.node.summit.field_sponsors
@@ -82,4 +83,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_display_order: true
+  field_link_to_summit: true
   field_register_capacity: true

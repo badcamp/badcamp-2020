@@ -17,7 +17,7 @@ field_name: field_link_to_session
 entity_type: node
 bundle: session
 label: 'Link to Session'
-description: 'Direct link to session. Hopin venue tag will link here. If this field is left blank, link will go to front page of event. '
+description: 'Direct link to session within Hopin. Hopin venue tag will link here. If this field is left blank, link will go to front page of Hopin event. '
 required: false
 translatable: false
 default_value: {  }
