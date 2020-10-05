@@ -24,6 +24,7 @@ dependencies:
     - node.type.session
   module:
     - file
+    - link
     - text
     - user
     - video_embed_field
@@ -35,20 +36,32 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     region: content
   field_day:
     type: entity_reference_label
-    weight: 2
+    weight: 3
     region: content
     label: visually_hidden
     settings:
       link: false
     third_party_settings: {  }
+  field_link_to_session:
+    type: link
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
   field_members:
-    weight: 8
+    weight: 9
     label: hidden
     settings:
       view_mode: sponsor_team_member
@@ -57,7 +70,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_session_presentation_video:
-    weight: 5
+    weight: 6
     label: hidden
     settings:
       responsive: true
@@ -68,7 +81,7 @@ content:
     type: video_embed_field_video
     region: content
   field_session_slides:
-    weight: 7
+    weight: 8
     label: hidden
     settings:
       use_description_as_link_text: true
@@ -76,7 +89,7 @@ content:
     type: file_table
     region: content
   field_session_topics:
-    weight: 4
+    weight: 5
     label: visually_hidden
     settings:
       link: false
@@ -84,7 +97,7 @@ content:
     type: entity_reference_label
     region: content
   field_sponsors:
-    weight: 9
+    weight: 10
     label: hidden
     settings:
       view_mode: sponsor_logo
@@ -94,7 +107,7 @@ content:
     region: content
   field_timeslot:
     type: entity_reference_label
-    weight: 3
+    weight: 4
     region: content
     label: visually_hidden
     settings:
@@ -115,7 +128,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_do_you_identify: true
-  field_link_to_session: true
   field_register_capacity: true
   field_session_length: true
   field_status: true
