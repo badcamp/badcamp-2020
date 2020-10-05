@@ -71,6 +71,17 @@
 					</div>
 				{% endif %}
 
+				{% if content.field_live_captioned|render|striptags|trim == 'Yes' %}
+					<div class='event-details__field event-details__field--cc'>
+						<span>
+							<i class='fa fa-cc' aria-hidden='true'></i>
+						</span>
+						<span>
+							This session will be live captioned
+						</span>
+					</div>
+				{% endif %}
+
 				<div class='session__add_to_schedule field__add__to__schedule'>
 					{{ content.flag_add_to_schedule }}
 				</div>

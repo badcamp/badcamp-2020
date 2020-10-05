@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.session.field_day
     - field.field.node.session.field_do_you_identify
     - field.field.node.session.field_link_to_event
+    - field.field.node.session.field_live_captioned
     - field.field.node.session.field_members
     - field.field.node.session.field_register_capacity
     - field.field.node.session.field_session_length
@@ -67,6 +68,16 @@ content:
       target: '0'
     third_party_settings: {  }
     type: link
+    region: content
+  field_live_captioned:
+    weight: 19
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_members:
     weight: 3

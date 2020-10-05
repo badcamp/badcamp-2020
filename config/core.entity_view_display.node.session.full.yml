@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.session.field_day
     - field.field.node.session.field_do_you_identify
     - field.field.node.session.field_link_to_event
+    - field.field.node.session.field_live_captioned
     - field.field.node.session.field_members
     - field.field.node.session.field_register_capacity
     - field.field.node.session.field_session_length
@@ -36,7 +37,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -60,8 +61,18 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
+  field_live_captioned:
+    type: boolean
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
   field_members:
-    weight: 9
+    weight: 10
     label: hidden
     settings:
       view_mode: sponsor_team_member
@@ -70,7 +81,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_session_presentation_video:
-    weight: 6
+    weight: 7
     label: hidden
     settings:
       responsive: true
@@ -81,7 +92,7 @@ content:
     type: video_embed_field_video
     region: content
   field_session_slides:
-    weight: 8
+    weight: 9
     label: hidden
     settings:
       use_description_as_link_text: true
@@ -97,7 +108,7 @@ content:
     type: entity_reference_label
     region: content
   field_sponsors:
-    weight: 10
+    weight: 11
     label: hidden
     settings:
       view_mode: sponsor_logo
