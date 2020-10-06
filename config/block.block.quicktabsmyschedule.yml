@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - quicktabs
+    - user
   theme:
     - bay_area_camp
 id: quicktabsmyschedule
@@ -17,4 +18,11 @@ settings:
   label: 'My Schedule'
   provider: quicktabs
   label_display: visible
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

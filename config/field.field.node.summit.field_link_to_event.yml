@@ -1,0 +1,28 @@
+uuid: b3d816f9-a68c-4407-bf78-a33284f87085
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_to_event
+    - node.type.summit
+  module:
+    - custom_add_another
+    - link
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.summit.field_link_to_event
+field_name: field_link_to_event
+entity_type: node
+bundle: summit
+label: 'Link to Event'
+description: 'Direct link to event within Hopin or Zoom. Hopin or Zoom venue tag will link here. If this field is left blank, link will go to front page of appropriate Hopin event. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

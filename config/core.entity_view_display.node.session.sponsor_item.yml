@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_day
     - field.field.node.session.field_do_you_identify
+    - field.field.node.session.field_link_to_event
+    - field.field.node.session.field_live_captioned
     - field.field.node.session.field_members
     - field.field.node.session.field_register_capacity
     - field.field.node.session.field_session_length
@@ -40,7 +42,7 @@ content:
     weight: 5
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -56,7 +58,7 @@ content:
     weight: 3
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -64,7 +66,7 @@ content:
     weight: 4
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -72,7 +74,7 @@ content:
     weight: 6
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -83,6 +85,8 @@ content:
     third_party_settings: {  }
 hidden:
   field_do_you_identify: true
+  field_link_to_event: true
+  field_live_captioned: true
   field_register_capacity: true
   field_session_length: true
   field_session_presentation_video: true

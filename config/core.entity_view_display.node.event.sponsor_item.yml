@@ -8,7 +8,9 @@ dependencies:
     - field.field.node.event.field_day
     - field.field.node.event.field_event_type
     - field.field.node.event.field_leader
+    - field.field.node.event.field_link_to_event
     - field.field.node.event.field_more_info_link
+    - field.field.node.event.field_register_capacity
     - field.field.node.event.field_sponsors
     - field.field.node.event.field_timeslot
     - field.field.node.event.field_venue
@@ -61,6 +63,7 @@ content:
 hidden:
   field_event_type: true
   field_leader: true
+  field_link_to_event: true
   field_more_info_link: true
   field_register_capacity: true
   field_sponsors: true

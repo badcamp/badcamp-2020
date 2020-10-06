@@ -1,5 +1,5 @@
-site_key: ''
-secret_key: ''
+site_key: 6LfJXSoUAAAAAGDvBYWQLJsG2S01rE61WKAyYm_Y
+secret_key: 6LfJXSoUAAAAALIiBebMsZbaNGI3fnOG1mxo1-0P
 verify_hostname: false
 use_globally: false
 widget:
@@ -7,6 +7,6 @@ widget:
   type: image
   size: ''
   tabindex: 0
-  noscript: false
+  noscript: true
 _core:
   default_config_hash: eKR4FfUD7Cp3bXamsCz6GAxh0PCLIZNMa65y2kChIh0

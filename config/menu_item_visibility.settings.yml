@@ -43,3 +43,6 @@ mlid:
   'menu_link_content:f574cfa7-7c0b-4dbc-8456-d18265e4f52b':
     roles: {  }
     access_check: false
+  'menu_link_content:49f22a4c-0f02-4523-a4c3-fa488ff71386':
+    roles: {  }
+    access_check: false

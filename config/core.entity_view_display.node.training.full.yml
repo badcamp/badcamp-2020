@@ -39,7 +39,7 @@ content:
     weight: 2
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -63,7 +63,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -80,7 +80,7 @@ content:
     weight: 4
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -98,7 +98,7 @@ content:
     region: content
     label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_training_links:
     weight: 7
@@ -116,7 +116,7 @@ content:
     weight: 1
     label: visually_hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content

@@ -14,14 +14,15 @@
 }
 
 .field__add__to__schedule {
-  // margin-top: 1.5em;
+  margin-top: 1.5em;
 }
 .flag-add-to-schedule {
   i {
     margin-right: 10px;
   }
 }
-.event-details__field {
+.event-details__field,
+.event-details-inline__field {
   display: flex;
   align-items: center;
   margin: 10px 0;
@@ -30,13 +31,27 @@
     font-size: 1.25em;
     width: 1em;
     text-align: center;
-    margin-right: 0.5em;
+    margin-right: 0.75em;
+  }
+  a {
+    border-bottom: 2px solid $lightblue;
+    &:hover {
+      border-bottom: 2px solid $dark-salmon;
+      text-decoration: none;
+    }
+  }
+}
+
+.event-details-inline__field--cc {
+  .fa-cc {
+    margin-right: 0.75em;
   }
 }
 
 .event-details__field--venue,
-.event-details__field--topics {
-  line-height: 1.3;
+.event-details__field--topics,
+.event-details__field--cc {
+  line-height: 1.25;
 }
 
 .event-attachments {

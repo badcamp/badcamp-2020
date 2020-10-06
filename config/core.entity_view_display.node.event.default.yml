@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.field_day
     - field.field.node.event.field_event_type
     - field.field.node.event.field_leader
+    - field.field.node.event.field_link_to_event
     - field.field.node.event.field_more_info_link
     - field.field.node.event.field_register_capacity
     - field.field.node.event.field_sponsors
@@ -25,12 +26,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     region: content
   field_day:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       link: false
@@ -46,7 +47,7 @@ content:
     type: entity_reference_label
     region: content
   field_leader:
-    weight: 7
+    weight: 8
     label: hidden
     settings:
       view_mode: sponsor_team_member
@@ -54,8 +55,20 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
+  field_link_to_event:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
   field_more_info_link:
-    weight: 6
+    weight: 7
     label: hidden
     settings:
       trim_length: 80
@@ -67,7 +80,7 @@ content:
     type: link
     region: content
   field_register_capacity:
-    weight: 9
+    weight: 10
     label: above
     settings:
       thousand_separator: ''
@@ -76,7 +89,7 @@ content:
     type: number_integer
     region: content
   field_sponsors:
-    weight: 8
+    weight: 9
     label: hidden
     settings:
       view_mode: sponsor_logo
@@ -85,7 +98,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_timeslot:
-    weight: 4
+    weight: 5
     label: inline
     settings:
       link: false
@@ -94,7 +107,7 @@ content:
     region: content
   field_venue:
     weight: 2
-    label: inline
+    label: hidden
     settings:
       link: false
     third_party_settings: {  }
